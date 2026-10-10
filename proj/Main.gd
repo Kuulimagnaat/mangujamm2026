@@ -36,7 +36,7 @@ func _ready() -> void:
 # 0 tähendab mängu kinnipanemist.
 # 2 tähendab mängu menüüst mängima liikumise protsessi (kestab ainult mõnd aega).
 # 3 tähendab mängus olemist.
-var olek = 1
+var olek = 2
 # Aeg sekundites, mis kulub, et menüüst liikude mängu.
 var menüüstMänguT = 1
 var menüüstMängut = 0
@@ -65,6 +65,7 @@ func MenüüstMänguMinek(delta):
 	
 	if menüüstMängut >= menüüstMänguT:
 		menüüstMängut = 0
+		$Menuu.visible=false
 		olek = 3
 	
 
