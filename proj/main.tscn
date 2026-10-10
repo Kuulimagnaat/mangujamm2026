@@ -4,11 +4,137 @@
 [ext_resource type="Texture2D" uid="uid://brpsjfj60mx8u" path="res://Joonistused/menu_taust.png" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://g0ucl476d1l8" path="res://menuu.gd" id="2_5vw27"]
 [ext_resource type="Texture2D" uid="uid://c8n5sufehykey" path="res://Joonistused/taust.png" id="2_h2yge"]
-[ext_resource type="Texture2D" uid="uid://bovd7r7x4qxsh" path="res://Joonistused/AP5.png" id="2_lquwl"]
-[ext_resource type="Texture2D" uid="uid://55rvbvcdidoy" path="res://Joonistused/AP4.png" id="3_7mycd"]
+[ext_resource type="Texture2D" uid="uid://0p40tqb8lfgv" path="res://Joonistused/Säär.png" id="3_272bh"]
 [ext_resource type="Script" uid="uid://ckmbqosfu3btp" path="res://Helislaider.gd" id="4_272bh"]
-[ext_resource type="Texture2D" uid="uid://udbvr1smfenk" path="res://Joonistused/AP2.png" id="5_5vw27"]
+[ext_resource type="Texture2D" uid="uid://nunfx0xgwbhf" path="res://Joonistused/Püks.png" id="5_kek77"]
+[ext_resource type="Texture2D" uid="uid://dobdahkoxf81o" path="res://Joonistused/Valikud.png" id="6_4c57u"]
 [ext_resource type="Script" uid="uid://cwlaesoua1f5f" path="res://sein.gd" id="8_kek77"]
+
+[sub_resource type="Animation" id="Animation_efxa6"]
+resource_name = "MenüüstMängu"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Menuu:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(0.5, 3.2490113),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(10, 10)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sein:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(1.074074, 1.074074), Vector2(3.054, 3.054)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sein:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(-68, 13), Vector2(-218, -368)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Tuba:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.5, 1.5)]
+}
+
+[sub_resource type="Animation" id="Animation_kek77"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Menuu:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sein:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.074074, 1.074074)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sein:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-68, 13)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Tuba:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4c57u"]
+resource_name = "new_animation"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Menuu:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_efxa6"]
+_data = {
+&"MenüüstMängu": SubResource("Animation_efxa6"),
+&"RESET": SubResource("Animation_kek77"),
+&"new_animation": SubResource("Animation_4c57u")
+}
 
 [node name="Main" type="Node2D" unique_id=705257226]
 script = ExtResource("1_0xm2m")
@@ -44,8 +170,8 @@ theme_override_font_sizes/font_size = 30
 [node name="Menuu" type="Control" parent="." unique_id=136811666]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 45.635
-offset_bottom = 40.0
+offset_left = -300.0
+offset_right = -300.0
 script = ExtResource("2_5vw27")
 
 [node name="Mangi" type="Button" parent="Menuu" unique_id=1135193109]
@@ -54,33 +180,37 @@ offset_left = -161.0
 offset_top = -375.0
 offset_right = 194.0
 offset_bottom = -82.0
-icon = ExtResource("2_lquwl")
 
 [node name="Valja" type="Button" parent="Menuu" unique_id=91706466]
+visible = false
 layout_mode = 0
 offset_left = 374.0
 offset_top = -245.0
 offset_right = 539.0
 offset_bottom = -36.0
-icon = ExtResource("3_7mycd")
 
 [node name="VSlider" type="VSlider" parent="Menuu" unique_id=32207733]
+visible = false
 layout_mode = 0
 offset_left = -751.0
 offset_top = -397.0
 offset_right = -424.0
 offset_bottom = 52.0
-theme_override_icons/grabber = ExtResource("3_7mycd")
-theme_override_icons/grabber_highlight = ExtResource("2_lquwl")
+theme_override_icons/grabber = ExtResource("3_272bh")
+theme_override_icons/grabber_highlight = ExtResource("3_272bh")
 value = 2.0
 script = ExtResource("4_272bh")
 
 [node name="Püks" type="Sprite2D" parent="Menuu/VSlider" unique_id=167368979]
+visible = false
 position = Vector2(337, 333)
-texture = ExtResource("5_5vw27")
+texture = ExtResource("5_kek77")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 252, 99.18)
+
+[node name="Nöör" type="Sprite2D" parent="Menuu" unique_id=1331890702]
+texture = ExtResource("6_4c57u")
 
 [node name="Sein" type="Sprite2D" parent="." unique_id=401554642]
 z_index = -1
@@ -92,3 +222,6 @@ script = ExtResource("8_kek77")
 [node name="Tuba" type="Sprite2D" parent="." unique_id=1050310947]
 z_index = -2
 texture = ExtResource("2_h2yge")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=714302648]
+libraries/ = SubResource("AnimationLibrary_efxa6")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://udbvr1smfenk"
-path="res://.godot/imported/AP2.png-545818bc5118c4eed9dc570942596bd8.ctex"
+uid="uid://dobdahkoxf81o"
+path="res://.godot/imported/Valikud.png-b627380de429ef1533478ac0944973d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Joonistused/AP2.png"
-dest_files=["res://.godot/imported/AP2.png-545818bc5118c4eed9dc570942596bd8.ctex"]
+source_file="res://Joonistused/Valikud.png"
+dest_files=["res://.godot/imported/Valikud.png-b627380de429ef1533478ac0944973d6.ctex"]
 
 [params]
 

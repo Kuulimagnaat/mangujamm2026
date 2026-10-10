@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkufvc25vru4o"
-path="res://.godot/imported/Ajutine pesumasin.png-74898eb1cd714e0d227cbf2fe2f94c33.ctex"
+uid="uid://nunfx0xgwbhf"
+path="res://.godot/imported/Püks.png-d128664eb4d716af11ee3f62c5dc449f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Joonistused/Ajutine pesumasin.png"
-dest_files=["res://.godot/imported/Ajutine pesumasin.png-74898eb1cd714e0d227cbf2fe2f94c33.ctex"]
+source_file="res://Joonistused/Püks.png"
+dest_files=["res://.godot/imported/Püks.png-d128664eb4d716af11ee3f62c5dc449f.ctex"]
 
 [params]
 
