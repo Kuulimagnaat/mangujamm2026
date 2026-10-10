@@ -6,6 +6,7 @@
 radius = 88.23265
 
 [node name="Pesumasin" type="Sprite2D" unique_id=1650951301]
+z_index = -2
 script = ExtResource("2_bq02f")
 
 [node name="RiidedSisseAla" type="Area2D" parent="." unique_id=1148682131]
