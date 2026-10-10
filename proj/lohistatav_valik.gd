@@ -51,9 +51,12 @@ func _process(delta: float) -> void:
 			vanem.esita_valik()
 func masinasse():
 	vanem.eemalda_riided()
+	
+	var auhind = 30
+	
 	if õige == true:
-		Global.rahulolu += 20
+		Global.rahulolu = min(Global.rahulolu + auhind, 100)
 		vanem.kummitustase = 1
 	else:
-		Global.rahulolu -= 40
+		Global.rahulolu -= 50
 	
