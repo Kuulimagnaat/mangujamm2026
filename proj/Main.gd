@@ -2,7 +2,6 @@ extends Node2D
 
 var mõõt
 var timer
-var kummitab = true
 
 var nr
 var vastus
@@ -15,6 +14,7 @@ var valik3
 
 var eseme_asukohad = [Vector2(-400,300), Vector2(0,300), Vector2(400,300)]
 var hiir_masinal = false
+var hiireotsas = null
 var pesumasinastseen
 var pesumasin
 var kummitustase = 1
@@ -32,7 +32,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	
 		Global.rahulolu -= kummitustase*delta
-		kummitustase += 3*delta
+		kummitustase += 2*delta
 		mõõt.value = Global.rahulolu
 func esita_valik():
 	if valik1 != null:

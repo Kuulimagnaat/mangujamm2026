@@ -21,13 +21,17 @@ func hiirekontroll():
 func _process(delta: float) -> void:
 	if lohistab == true:
 		self.global_position = get_global_mouse_position()
+
 	if hiir_valikul == true and Input.is_action_pressed("Vasak_Hiir"):
 		lohistab = true
 	else:
 		if hiir_valikul == true and vanem.hiir_masinal == true:
 			masinasse()
+			vanem.hiireotsas = null
 		else:
 			lohistab = false
+			vanem.hiireotsas = null
+			
 
 	if Input.is_action_just_released("Vasak_Hiir") and hiir_valikul == true:
 		var tween = get_tree().create_tween()
