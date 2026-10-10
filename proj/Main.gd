@@ -62,7 +62,8 @@ func MängiNupuVajutusel():
 
 	
 func _process(delta: float) -> void:
-
+	if Input.is_action_just_pressed("lisa"):
+		valikunumber += 1
 	if olek == 3:
 		
 		Global.rahulolu -= kummitustase*delta
