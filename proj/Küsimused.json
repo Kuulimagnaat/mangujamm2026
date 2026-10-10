@@ -1,19 +1,209 @@
 {
-    "küs" :
-    [
-        [
-            ["Rohelist", "Roheline särk"],
-            ["Sinist", "Sinised teksad"],
-            ["Punast", "Punased sokid"]
-        ],
-        [
-    
-        ]
-    ],
+	"küs" :
+	[
+		[
+			["Rohelist", "Roheline särk"],
+			["Sinist", "Sinised teksad"],
+			["Punast", "Punased sokid"]
+		],
+		[
+			["Täpilist","res://Masinasse/triibuline_sark.png"],
+			["Triibulist","res://Masinasse/triibulised_sokid.png"],
+			["Ruudulist", "res://Masinasse/ruuduline_sark.png"]
+		],
+		[
+			["Särki","res://Masinasse/kassisark.png"],
+			["Pükse","res://Masinasse/luhikesed_puksid.png"],
+			["Sokke","res://Masinasse/mustvalged_sokid.png"]
+		],
+		[
+			["Riiete hoidmiseks","res://Masinasse/riidepuu.png"],
+			["Juua","res://Masinasse/seebipudel.png"],
+			["Sooja","res://Masinasse/magamiskott.png"]
+		],
+		[
+			["Armsat","res://Masinasse/kassisark.png"],
+			["Hirmsat","res://Masinasse/krokodillisark.png"],
+			["Viedrat","res://Masinasse/nokkloomasark.png"]
+		],
+		[
+			["Eriti augulist","res://Masinasse/AUKLIKUD_SOKID.png"],
+			["Augulist","res://Masinasse/ruuduline_sark.png"],
+			["Aukudeta","res://Masinasse/aukudeta_alukad.png"]
+		],
+		[
+			["Pulma","res://Masinasse/pulmakleit.png"],
+			["Matusele","res://Masinasse/umbrella.png"],
+			["Sünnitusele",""]
+		],
+		[
+			["Süüa","res://Masinasse/lihakantsakas.png"],
+			["Meelelahutuseks","res://Masinasse/raamat.png"],
+			["Magamiseks","res://Masinasse/unetabletid.png"]
+		],
+		[
+			["Tulevikust",""],
+			["Vana",""],
+			["Tänapäevast","res://Masinasse/Sinised teksad.png"]
+		],
+		[
+			["Kasulikku",""],
+			["Ilusat",""],
+			["Olulist",""]
+		],
+		[
+			["Ägeduseks",""],
+			["Kiiruseks",""],
+			["Mugavuseks",""]
+		],
+		[
+			["Veest",""],
+			["Õhust",""],
+			["Maast","res://Masinasse/surnud_mutt.png"]
+		],
+		[
+			["Jumalateenistuseks","res://Masinasse/hakama.png"],
+			["Juubeliks","res://Masinasse/kimono.png"],
+			["Midagi peale visata","res://Masinasse/haori.png"]
+		],
+		[
+			["Tehnoloogilist","res://Masinasse/lapakas.png"],
+			["Primitiivset",""],
+			["Keskaegset",""]
+		],
+		[
+			["Armsat","res://Masinasse/kass.png"],
+			["Armsat",""],
+			["Armsat",""]
+		],
+		[
+			["Väärtuslikku","res://Masinasse/aktsiad.png"],
+			["Arvepabereid",""],
+			["Bitcoin","res://Masinasse/bitcoin.png"]
+		],
+		[
+			["Lahinguks","res://Masinasse/vammus.png"],
+			["Soojaks",""],
+			["Stiiliks",""]
+		],
+		[
+			["Sinu suurim saladus",""],
+			["Sinu suurim saladus",""],
+			["Sinu suurim saladus",""]
+		],
+		[
+			["Mustvalget","res://Masinasse/mustad_sokid_valgete_triipudega.png"],
+			["Vastmulget","res://Masinasse/valged_sokid_mustade_triipudega.png"],
+			["Sama musta kui valget","res://Masinasse/mustvalged_sokid.png"]
+		],
+		[
+			["Kas oled valmis suureks ohverduseks",""],
+			["Kas oled valmis suureks ohverduseks",""],
+			["Kas oled valmis suureks ohverduseks",""]
+		],
+	],
 
-    "Vas":
-    [
-        ["Roheline särk", 10, 10],
-        ["Sinised teksad", 10, 10]
-    ]
+	"Vas":
+	[
+	[
+		["res://Masinasse/roheline_sark.png", 10, 10],
+		["res://Masinasse/Sinised teksad.png", 10, 10],
+		["res://Masinasse/punased_sokid.png", 10, 10]
+	],
+	[
+		["res://Masinasse/triibuline_sark.png", 10,10],
+		["res://Masinasse/triibulised_sokid.png", 10,10],
+		["res://Masinasse/ruuduline_sark.png", 1,1]
+	],
+	[
+		["res://Masinasse/kassisark.png", 1,1],
+		["res://Masinasse/luhikesed_puksid.png", 1,1],
+		["res://Masinasse/mustvalged_sokid.png", 1,1]
+	],
+	[
+		["res://Masinasse/riidepuu.png", 1,1],
+		["res://Masinasse/seebipudel.png", 1,1],
+		["res://Masinasse/magamiskott.png", 1,1]
+	],
+	[
+		["res://Masinasse/kassisark.png", 1,1],
+		["res://Masinasse/krokodillisark.png", 1,1],
+		["res://Masinasse/nokkloomasark.png", 1,1]
+	],
+	[
+		["res://Masinasse/AUKLIKUD_SOKID.png", 1,1],
+		["res://Masinasse/ruuduline_sark.png", 1,1],
+		["res://Masinasse/aukudeta_alukad.png", 1,1]
+	],
+	[
+		["res://Masinasse/pulmakleit.png", 1,1],
+		["res://Masinasse/umbrella.png", 1,1],
+		["", 1,1]
+	],
+	[
+		["res://Masinasse/lihakantsakas.png", 1,1],
+		["res://Masinasse/raamat.png", 1,1],
+		["res://Masinasse/unetabletid.png", 1,1]
+	],
+	[
+		["", 1,1],
+		["", 1,1],
+		["res://Masinasse/Sinised teksad.png", 1,1]
+	],
+	[
+		["", 1,1],
+		["", 1,1],
+		["", 1,1]
+	],
+	[
+		["", 1,1],
+		["", 1,1],
+		["", 1,1]
+	],
+	[
+		["", 1,1],
+		["", 1,1],
+		["res://Masinasse/surnud_mutt.png", 1,1]
+	],
+	[
+		["res://Masinasse/hakama.png", 1,1],
+		["res://Masinasse/kimono.png", 1,1],
+		["res://Masinasse/haori.png", 1,1]
+	],
+	[
+		["res://Masinasse/lapakas.png", 1,1],
+		["", 1,1],
+		["", 1,1]
+	],
+	[
+		["res://Masinasse/kass.png", 1,1],
+		["", 1,1],
+		["", 1,1]
+	],
+	[
+		["res://Masinasse/aktsiad.png", 1,1],
+		["", 1,1],
+		["res://Masinasse/bitcoin.png", 1,1]
+	],
+		[
+		["res://Masinasse/vammus.png", 1,1],
+		["", 1,1],
+		["", 1,1]
+	],
+		[
+		["", 1,1],
+		["", 1,1],
+		["", 1,1]
+	],
+		[
+		["res://Masinasse/mustad_sokid_valgete_triipudega.png", 1,1],
+		["res://Masinasse/valged_sokid_mustade_triipudega.png", 1,1],
+		["res://Masinasse/mustvalged_sokid.png", 1,1]
+	],
+		[
+		["", 1,1],
+		["", 1,1],
+		["", 1,1]
+	]
+	]
 }
