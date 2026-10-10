@@ -34,15 +34,8 @@ func _ready() -> void:
 	mental = $"Mental meter"
 	mental.value = Global.mental
 	eseme_asukohad.shuffle()
-	pesumasinastseen = preload("res://pesumasin.tscn")
-	pesumasin = pesumasinastseen.instantiate()
-	add_child(pesumasin)
 	mõõt.visible = false
 	mental.visible = false
-	#pesumasinastseen = preload("res://pesumasin.tscn")
-	#pesumasin = pesumasinastseen.instantiate()
-	#pesumasin.position = Vector2(500,0)
-	#add_child(pesumasin)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
 # 1 tähendab menüüs olemist.
