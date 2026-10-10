@@ -29,7 +29,8 @@ var variandid
 func _ready() -> void:
 	#$Menuu/Mangi.pressed.connect(MängiNupuVajutusel)
 	
-	mõõt = $"Ghost-o-meter"
+	#mõõt = $"Ghost-o-meter"
+	mõõt = $"Progress/Ghost-o-meter"
 	mõõt.value = Global.rahulolu
 	eseme_asukohad.shuffle()
 	$Tekstimull.visible = false
@@ -55,7 +56,7 @@ func eemalda_riided():
 		tween.tween_property(valik3, "position", Vector2(valik3.position.x,1000),0.4)
 func MängiNupuVajutusel():
 	$AnimationPlayer.play("MenüüstMängu")
-	await get_tree().create_timer(2).timeout
+	await get_tree().create_timer(3).timeout
 	olek = 3
 	esita_valik()
 	
