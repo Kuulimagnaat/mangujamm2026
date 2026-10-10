@@ -15,5 +15,4 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Global.rahulolu < 20:
 		texture = väimus1
-	elif Global.rahulolu < 20 and Globa:
 		

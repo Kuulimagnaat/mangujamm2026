@@ -9,10 +9,10 @@ script = ExtResource("1_0xm2m")
 
 [node name="Ghost-o-meter" type="ProgressBar" parent="." unique_id=2078773219]
 modulate = Color(0, 0.67429006, 0.6742898, 1)
-offset_left = 807.0
-offset_top = 508.0
-offset_right = 1670.8254
-offset_bottom = 616.6155
+offset_left = 813.0
+offset_top = 495.0
+offset_right = 1676.8254
+offset_bottom = 603.6155
 rotation = -1.5707964
 show_percentage = false
 
