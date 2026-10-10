@@ -18,18 +18,27 @@ var hiir_masinal = false
 var hiireotsas = null
 var pesumasinastseen
 var pesumasin
-var kummitustase = 1.2
+var kummitustase = 3
+var rahulolutase = 3
 
 var teksti_kiirus = 0.1
 var küsimus
 var variandid
+
+var mental
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Menuu/Mangi.pressed.connect(MängiNupuVajutusel)
 	mõõt = $"Ghost-o-meter"
 	mõõt.value = Global.rahulolu
+	mental = $"Mental meter"
+	mental.value = Global.mental
 	eseme_asukohad.shuffle()
-	esita_valik()
+	pesumasinastseen = preload("res://pesumasin.tscn")
+	pesumasin = pesumasinastseen.instantiate()
+	add_child(pesumasin)
+	mõõt.visible = false
+	mental.visible = false
 	#pesumasinastseen = preload("res://pesumasin.tscn")
 	#pesumasin = pesumasinastseen.instantiate()
 	#pesumasin.position = Vector2(500,0)
@@ -49,14 +58,24 @@ func MängiNupuVajutusel():
 	$AnimationPlayer.play("MenüüstMängu")
 	olek = 2
 	
-	
+
 	
 func _process(delta: float) -> void:
+
+	if olek == 3:
+		Global.rahulolu -= kummitustase*delta
+		kummitustase += 1.5*delta
+		mõõt.value = Global.rahulolu
 	
-		
-	Global.rahulolu -= kummitustase*delta
-	kummitustase += 1.5*delta
-	mõõt.value = Global.rahulolu
+		Global.mental += rahulolutase*delta
+		mental.value = Global.mental
+	
+	if mental.value <= 0:
+		kaotad()
+	if mõõt.value > 100:
+		mõõt.value = 100
+	if mõõt.value <= 0:
+		karista()
 func esita_valik():
 	valikunumber += 1
 	if valik1 != null:
@@ -105,9 +124,16 @@ func hiirekontroll():
 	elif hiir_masinal == false:
 		hiir_masinal = true
 func lisa_tekst():
-	print(küsimus[nr])
 	$Tekstimull.text = str(küsimus[nr])
 	$Tekstimull.visible_characters = 0
 	for i in range($Tekstimull.text.length()):
 		$Tekstimull.visible_characters = i+1
 		await get_tree().create_timer(teksti_kiirus).timeout
+func karista():
+	Global.mental -= 66
+	Global.rahulolu = 50
+func kaotad():
+	Global.mental = 50
+	Global.rahulolu = 50
+	get_tree().reload_current_scene()
+	
