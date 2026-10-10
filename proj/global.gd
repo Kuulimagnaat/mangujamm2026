@@ -5,7 +5,7 @@ var rahulolu
 
 var küsimus1 = ["Rohelist", "Sinist", "Punast"]
 var vastus1 = [load("res://Masinasse/roheline_sark.png"), load("res://Masinasse/Sinised teksad.png"), load("res://Masinasse/punased_sokid.png")]
-var küsimus2 = ["Triibulist", "Täpilist", "Ruudulist"]
+var küsimus2 = ["Täpilist", "Triibulist", "Ruudulist"]
 var vastus2 = [load("res://Masinasse/triibuline_sark.png"),load("res://Masinasse/triibulised_sokid.png"),load("res://Masinasse/ruuduline_sark.png")]
 var küsimus3 = ["Särki", "Pükse", "Sokke"]
 var vastus3 = [load("res://Masinasse/kassisark.png"),load("res://Masinasse/luhikesed_puksid.png"),load("res://Masinasse/mustvalged_sokid.png")]
@@ -14,11 +14,11 @@ var vastus4 = [load("res://Masinasse/riidepuu.png"),load("res://Masinasse/seebip
 var küsimus5 = ["Armsat", "Hirmsat", "Veidrat"]
 var vastus5 = [load("res://Masinasse/kassisark.png"),load("res://Masinasse/krokodillisark.png"),load("res://Masinasse/nokkloomasark.png")]
 var küsimus6 = ["Eriti augulist", "Keskmiselt augulist", "Aukudeta"]
-#var vastus6 = [load("res://Masinasse/AUKLIKUD_SOKID.png"),load(),load()]
+var vastus6 = [load("res://Masinasse/AUKLIKUD_SOKID.png"),load("res://Masinasse/luhikesed_puksid.png"),load("res://Masinasse/aukudeta_alukad.png")]
 var küsimus7 = ["Pulma", "Matusele", "Sünnitusele"]
-#var vastus7 = [load(),load(),load()]
+#var vastus7 = [load("res://Masinasse/pulmakleit.png"),load(),load()]
 var küsimus8 = ["Süüa", "Meelelahutuseks", "Magamiseks"]
-#var vastus8 = [load(),load("res://Masinasse/raamat.png"),load("res://Masinasse/unetabletid.png")]
+#var vastus8 = [load("res://Masinasse/lihakantsakas.png"),load("res://Masinasse/raamat.png"),load("res://Masinasse/unetabletid.png")]
 var küsimus9 = ["Tulevikust", "Vana", "Tänapäevast"]
 #var vastus9 = [load(),load(),load()]
 var küsimus10 = ["Kasulikku", "Ilusat", "Olulist"]
@@ -46,7 +46,7 @@ var küsimus20 = ["Iseend"]
 #Vastustesse lähevad lihtsalt textuurid
 var võimalikud_küsimused = [küsimus1, küsimus2, küsimus3, küsimus4, küsimus5, küsimus6, küsimus7, küsimus8, küsimus9, küsimus10, küsimus11, küsimus11, küsimus11, küsimus12
 , küsimus12, küsimus13, küsimus14, küsimus15, küsimus16, küsimus17, küsimus18, küsimus19, küsimus20]
-var võimalikud_vastused = [vastus1, vastus2, vastus3] #vastus4, vastus5, vastus6, vastus7, vastus8, vastus9, vastus10, vastus11, vastus12, vastus13, vastus14, vastus15, 
+var võimalikud_vastused = [vastus1, vastus2, vastus3, vastus4]#vastus5, vastus6, vastus7, vastus8, vastus9, vastus10, vastus11, vastus12, vastus13, vastus14, vastus15, 
 #vastus16, vastus17, vastus18, vastus19, vastus20]
 
 func _ready() -> void:

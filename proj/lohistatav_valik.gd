@@ -20,7 +20,7 @@ func hiirekontroll():
 		hiir_valikul = true
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if hiir_valikul == true and Input.is_action_pressed("Vasak_Hiir"):
+	if hiir_valikul == true and Input.is_action_just_pressed("Vasak_Hiir"):
 		var tween = get_tree().create_tween()
 		tween.tween_property($".", "position", Vector2(get_global_mouse_position()),0.04)
 		lohistab = true
@@ -29,7 +29,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_released("Vasak_Hiir") and lohistab == true:
 		if vanem.hiir_masinal == true:
 			keerleb = true
-			lohistab = false
+			masinasse()
 		else:
 			var tween = get_tree().create_tween()
 			tween.tween_property($".", "position", Vector2(og_pos), 0.4)
@@ -43,12 +43,12 @@ func _process(delta: float) -> void:
 		scale.x -=0.5*delta
 		self.modulate.a -= 1*delta
 		if self.modulate.a <= 0:
-			masinasse()
+			vanem.esita_valik()
 func masinasse():
 	if õige == true:
 		Global.rahulolu += 20
 		vanem.kummitustase = 1
 	else:
 		Global.rahulolu -= 10
-	vanem.esita_valik()
+	keerleb = true
 	
