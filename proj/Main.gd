@@ -41,40 +41,17 @@ var menüüstMänguT = 1
 var menüüstMängut = 0
 
 func MängiNupuVajutusel():
+	$AnimationPlayer.play("MenüüstMängu")
 	olek = 2
-
-func MenüüsOlemine():
-	pass
-
-
-
-func MenüüstMänguMinek(delta):
-	menüüstMängut += delta;
-	var t = (menüüstMängut/menüüstMänguT)**3*PI
-	# t on kuubiga muutuv väärtus 0–PI.
-	var t2 = (-cos(t)/2+0.5)
-	# t2 on kuubiga muutub kiirenev aeglustuv
 	
 	
-	$Menuu.scale = Vector2(1+9*t2, 1+9*t2)
-	$Menuu.position.y -= 2*t2
-	$Sein.scale = Vector2($Sein.algsuurus+2*t2, $Sein.algsuurus+2*t2)
-	$Tuba.scale = Vector2(1+0.1*t2, 1+0.1*t2)
 	
-	
-	if menüüstMängut >= menüüstMänguT:
-		menüüstMängut = 0
-		$Menuu.visible=false
-		olek = 3
-	
-
 func _process(delta: float) -> void:
+	
 	if olek==1:
-		MenüüsOlemine()
-	if olek==2:
-		print("Kood siin!")
-		MenüüstMänguMinek(delta)
-		#MenüüstMänguMinek(delta)
+		pass
+	if olek==3:
+		pass
 		
 	Global.rahulolu -= kummitustase*delta
 	kummitustase += 2*delta
