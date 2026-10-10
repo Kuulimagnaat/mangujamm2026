@@ -15,6 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://btgilldkqx0xx" path="res://Joonistused/enter.png" id="11_efxa6"]
 [ext_resource type="Script" uid="uid://wavfa34n1yal" path="res://exitnupp.gd" id="13_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://cyr16u4lkcud7" path="res://Joonistused/not_exit.png" id="14_w48qg"]
+[ext_resource type="Texture2D" uid="uid://b10i6exeggkjj" path="res://Joonistused/progress.png" id="16_2cqfq"]
+[ext_resource type="StyleBox" uid="uid://8of6sggdiu1t" path="res://style/new_style_box_flat.tres" id="17_yaehf"]
 
 [sub_resource type="Animation" id="Animation_efxa6"]
 resource_name = "MenüüstMängu"
@@ -151,6 +153,18 @@ tracks/10/keys = {
 "update": 0,
 "values": [Vector2(1, 1), Vector2(3.054, 3.054)]
 }
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Progress:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.8333333, 2.4333334),
+"transitions": PackedFloat32Array(2.4622886, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_4c57u"]
 length = 0.001
@@ -190,6 +204,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [Vector2(1, 1)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Progress:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_efxa6"]
 _data = {
@@ -199,17 +225,6 @@ _data = {
 
 [node name="Main" type="Node2D" unique_id=705257226]
 script = ExtResource("1_0xm2m")
-
-[node name="Ghost-o-meter" type="ProgressBar" parent="." unique_id=2078773219]
-modulate = Color(0.21568628, 0.7607843, 0.69803923, 1)
-self_modulate = Color(0.24905181, 0.40623423, 0.37453306, 1)
-z_index = -2
-offset_left = 813.0
-offset_top = 495.0
-offset_right = 1676.8254
-offset_bottom = 603.6155
-rotation = -1.5707964
-show_percentage = false
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1694286927]
 
@@ -285,10 +300,10 @@ libraries/ = SubResource("AnimationLibrary_efxa6")
 
 [node name="Mental meter" type="ProgressBar" parent="." unique_id=670785659]
 z_index = -2
-offset_left = 687.0901
-offset_top = 499.47003
-offset_right = 1554.4602
-offset_bottom = 612.37994
+offset_left = -913.0
+offset_top = 431.0
+offset_right = -45.629883
+offset_bottom = 543.9099
 rotation = -1.5707964
 value = 50.0
 show_percentage = false
@@ -322,6 +337,24 @@ offset_top = -326.0
 offset_right = 962.0
 offset_bottom = 86.0
 flat = true
+
+[node name="Progress" type="Sprite2D" parent="." unique_id=699527980]
+modulate = Color(1, 1, 1, 0)
+z_index = 4
+position = Vector2(744, 4)
+texture = ExtResource("16_2cqfq")
+
+[node name="Ghost-o-meter" type="ProgressBar" parent="Progress" unique_id=2078773219]
+modulate = Color(0.15428373, 0.25272304, 0.20235538, 1)
+show_behind_parent = true
+offset_left = -46.0
+offset_top = 407.0
+offset_right = 768.5985
+offset_bottom = 500.05927
+rotation = -1.5707964
+theme_override_styles/fill = ExtResource("17_yaehf")
+value = 41.4
+show_percentage = false
 
 [connection signal="mouse_entered" from="sarknupp/Sprite2D/Button" to="sarknupp" method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="sarknupp/Sprite2D/Button" to="sarknupp" method="_on_button_mouse_exited"]
