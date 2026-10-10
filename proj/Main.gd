@@ -3,13 +3,17 @@ extends Node2D
 var mõõt
 var timer
 var kummitab = true
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	mõõt = $"Ghost-o-meter"
-	mõõt.value = 50
-
+	mõõt.value = Global.rahulolu
+	esita_valik()
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if kummitab == true:
-		mõõt.value -= 2*delta
-		
+		Global.rahulolu -= 2*delta
+		mõõt.value = Global.rahulolu
+func esita_valik():
+	
