@@ -1,7 +1,8 @@
 extends Node
 
 var rahulolu
-#Number küsimuse taga: Esimene näitab taset, teine numbrit, eristamiseks.
+var mental
+#On vaja küsimust, sellele vastavat vastust, numbrit kui palju see kummitusi õnnelikuks teeb, numbrit kui palju see sind kurvaks teeb.
 
 var küsimus1 = ["Rohelist", "Sinist", "Punast"]
 var vastus1 = [load("res://Masinasse/roheline_sark.png"), load("res://Masinasse/Sinised teksad.png"), load("res://Masinasse/punased_sokid.png")]
@@ -18,7 +19,7 @@ var vastus6 = [load("res://Masinasse/AUKLIKUD_SOKID.png"),load("res://Masinasse/
 var küsimus7 = ["Pulma", "Matusele", "Sünnitusele"]
 #var vastus7 = [load("res://Masinasse/pulmakleit.png"),load(),load()]
 var küsimus8 = ["Süüa", "Meelelahutuseks", "Magamiseks"]
-#var vastus8 = [load("res://Masinasse/lihakantsakas.png"),load("res://Masinasse/raamat.png"),load("res://Masinasse/unetabletid.png")]
+#var vastus8 = [load(),load("res://Masinasse/raamat.png"),load("res://Masinasse/unetabletid.png")]
 var küsimus9 = ["Tulevikust", "Vana", "Tänapäevast"]
 #var vastus9 = [load(),load(),load()]
 var küsimus10 = ["Kasulikku", "Ilusat", "Olulist"]
@@ -32,7 +33,7 @@ var vastus13 = [load("res://Masinasse/hakama.png"),load("res://Masinasse/kimono.
 var küsimus14 = ["Tehnoloogilist", "Primitiivset", "Keskaegset"]
 #var vastus14 = [load(),load(),load()]
 var küsimus15 = ["Armsat", "Armsat", "Armsat"]
-#var vastus15 = [load(),load(),load()]
+#var vastus15 = [load(),load(),load("res://Masinasse/lihakantsakas.png")]
 var küsimus16 = ["Väärtuslikku", "Arvepaberid", "Bitcoin"]
 #var vastus16 = [load(),load(),load()]
 var küsimus17 = ["Lahinguks", "Soojaks", "Stiiliks"]
@@ -51,3 +52,4 @@ var võimalikud_vastused = [vastus1, vastus2, vastus3, vastus4]#vastus5, vastus6
 
 func _ready() -> void:
 	rahulolu = 50
+	mental = 50

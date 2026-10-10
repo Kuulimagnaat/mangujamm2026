@@ -225,3 +225,12 @@ texture = ExtResource("2_h2yge")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=714302648]
 libraries/ = SubResource("AnimationLibrary_efxa6")
+
+[node name="Mental meter" type="ProgressBar" parent="." unique_id=670785659]
+offset_left = 687.0901
+offset_top = 499.47003
+offset_right = 1554.4602
+offset_bottom = 612.37994
+rotation = -1.5707964
+value = 50.0
+show_percentage = false
