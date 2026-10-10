@@ -8,12 +8,9 @@ func _ready() -> void:
 	$Area2D.mouse_exited.connect(hiirekontroll)
 
 func hiirekontroll():
-	print(1)
 	if hiir_valikul == true:
-		print(3)
 		hiir_valikul = false
 	elif hiir_valikul == false:
-		print(2)
 		hiir_valikul = true
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
