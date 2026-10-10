@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://eqgn3tvg73hk" path="res://pesumasin.tscn" id="10_4c57u"]
 [ext_resource type="Script" uid="uid://bvllfa5sx50vb" path="res://sarknupp.gd" id="11_dg77c"]
 [ext_resource type="Texture2D" uid="uid://btgilldkqx0xx" path="res://Joonistused/enter.png" id="11_efxa6"]
+[ext_resource type="Script" uid="uid://wavfa34n1yal" path="res://exitnupp.gd" id="13_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://cyr16u4lkcud7" path="res://Joonistused/not_exit.png" id="14_w48qg"]
 
 [sub_resource type="Animation" id="Animation_efxa6"]
 resource_name = "MenüüstMängu"
@@ -125,6 +127,30 @@ tracks/8/keys = {
 "update": 0,
 "values": [Vector2(1, 1), Vector2(10, 10)]
 }
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("exitnupp:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 2.4666667),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-114.642, -370.76)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("exitnupp:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 2.01),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(3.054, 3.054)]
+}
 
 [sub_resource type="Animation" id="Animation_4c57u"]
 length = 0.001
@@ -135,6 +161,30 @@ tracks/0/path = NodePath("sarknupp:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("exitnupp:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("exitnupp:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -181,6 +231,7 @@ grow_vertical = 2
 scale = Vector2(0.9, 0.9)
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 30
+autowrap_mode = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Tekstimull" unique_id=520462125]
 z_index = -3
@@ -193,13 +244,6 @@ anchors_preset = 0
 offset_left = -300.0
 offset_right = -300.0
 script = ExtResource("2_5vw27")
-
-[node name="Valja" type="Button" parent="Menuu" unique_id=91706466]
-layout_mode = 0
-offset_left = 374.0
-offset_top = -245.0
-offset_right = 539.0
-offset_bottom = -36.0
 
 [node name="VSlider" type="VSlider" parent="Menuu" unique_id=32207733]
 z_index = 1
@@ -256,6 +300,22 @@ offset_right = 121.0
 offset_bottom = -58.0
 flat = true
 
+[node name="exitnupp" type="Node2D" parent="." unique_id=1853769939]
+script = ExtResource("13_ycdy4")
+
+[node name="Sprite2D" type="Sprite2D" parent="exitnupp" unique_id=371479519]
+texture = ExtResource("14_w48qg")
+
+[node name="ExitButton" type="Button" parent="exitnupp/Sprite2D" unique_id=506933405]
+offset_left = 757.0
+offset_top = -326.0
+offset_right = 962.0
+offset_bottom = 86.0
+flat = true
+
 [connection signal="mouse_entered" from="sarknupp/Sprite2D/Button" to="sarknupp" method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="sarknupp/Sprite2D/Button" to="sarknupp" method="_on_button_mouse_exited"]
 [connection signal="pressed" from="sarknupp/Sprite2D/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="exitnupp/Sprite2D/ExitButton" to="exitnupp" method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="exitnupp/Sprite2D/ExitButton" to="exitnupp" method="_on_button_mouse_exited"]
+[connection signal="pressed" from="exitnupp/Sprite2D/ExitButton" to="." method="_on_exit_button_pressed"]
