@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cqow47bch5ocs"]
+
+[ext_resource type="Script" uid="uid://crtdv5djku0ij" path="res://Main.gd" id="1_0xm2m"]
+
+[node name="Main" type="Node2D" unique_id=705257226]
+script = ExtResource("1_0xm2m")
+
+[node name="Ghost-o-meter" type="ProgressBar" parent="." unique_id=2078773219]
+modulate = Color(0, 0.67429006, 0.6742898, 1)
+offset_left = 807.0
+offset_top = 508.0
+offset_right = 1670.8254
+offset_bottom = 616.6155
+rotation = -1.5707964
+show_percentage = false
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1694286927]
