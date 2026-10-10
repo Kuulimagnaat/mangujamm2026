@@ -5,7 +5,8 @@ var timer
 
 var nr
 var vastus
-var variandid
+
+var valikunumber = -1
 
 var valikustseen
 var valik1
@@ -19,6 +20,9 @@ var pesumasinastseen
 var pesumasin
 var kummitustase = 1
 
+var teksti_kiirus = 0.1
+var küsimus
+var variandid
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Menuu/Mangi.pressed.connect(MängiNupuVajutusel)
@@ -48,15 +52,12 @@ func MängiNupuVajutusel():
 	
 func _process(delta: float) -> void:
 	
-	if olek==1:
-		pass
-	if olek==3:
-		pass
 		
 	Global.rahulolu -= kummitustase*delta
-	kummitustase += 2*delta
+	kummitustase += 1*delta
 	mõõt.value = Global.rahulolu
 func esita_valik():
+	valikunumber += 1
 	if valik1 != null:
 		valik1.queue_free()
 	if valik2 != null:
@@ -64,9 +65,10 @@ func esita_valik():
 	if valik3 != null:
 		valik3.queue_free()
 	nr = randi_range(0,2)
-	$Tekstimull.text = Global.küsimus1[nr]
-	variandid = Global.vastus1
-	vastus = Global.vastus1[nr]
+	küsimus = Global.võimalikud_küsimused[valikunumber]
+	lisa_tekst()
+	variandid = Global.võimalikud_vastused[valikunumber]
+	vastus = variandid[nr]
 	
 	valikustseen = preload("res://lohistatav_valik.tscn")
 	
@@ -101,3 +103,10 @@ func hiirekontroll():
 		hiir_masinal = false
 	elif hiir_masinal == false:
 		hiir_masinal = true
+func lisa_tekst():
+	print(küsimus[nr])
+	$Tekstimull.text = str(küsimus[nr])
+	$Tekstimull.visible_characters = 0
+	for i in range($Tekstimull.text.length()):
+		$Tekstimull.visible_characters = i+1
+		await get_tree().create_timer(teksti_kiirus).timeout
