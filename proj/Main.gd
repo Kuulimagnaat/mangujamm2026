@@ -5,7 +5,8 @@ var timer
 
 var nr
 var vastus
-var variandid
+
+var valikunumber = -1
 
 var valikustseen
 var valik1
@@ -76,9 +77,10 @@ func _process(delta: float) -> void:
 		#MenüüstMänguMinek(delta)
 		
 	Global.rahulolu -= kummitustase*delta
-	kummitustase += 2*delta
+	kummitustase += 1*delta
 	mõõt.value = Global.rahulolu
 func esita_valik():
+	valikunumber += 1
 	if valik1 != null:
 		valik1.queue_free()
 	if valik2 != null:
@@ -86,9 +88,10 @@ func esita_valik():
 	if valik3 != null:
 		valik3.queue_free()
 	nr = randi_range(0,2)
-	$Tekstimull.text = Global.küsimus1[nr]
-	variandid = Global.vastus1
-	vastus = Global.vastus1[nr]
+	var küsimus = Global.võimalikud_küsimused[valikunumber]
+	$Tekstimull.text = küsimus[nr]
+	var variandid = Global.võimalikud_vastused[valikunumber]
+	vastus = variandid[nr]
 	
 	valikustseen = preload("res://lohistatav_valik.tscn")
 	
