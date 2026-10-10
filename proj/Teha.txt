@@ -1,0 +1,8 @@
+Ei saa korjata kaks asja korraga
+Asi ei snapi hiirele
+Asi keerleb masinasse
+Meeter peale õige asja söötmist liigub aeglaselt ja hakkab aina kiiremini alla minema.
+
+Basically, tavaliselt on kolmene set esemeid. Igaüks võib olla õige, nendele on vastavad kolm küsimust. Iga küsimuse puhul on eri ese setist õige.
+Vahel on mingid eri küsimused, kus küsitakse midagi spetsiifilist, seal saavad olla eri vastused. Näiteks küsitakse hinge. Valikud: Kass, Toataim, Näoga särk.
+Toataim on vähenegatiivne, särk on mega negatiivne, kass on super positiivne.
