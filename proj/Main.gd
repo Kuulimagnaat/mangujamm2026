@@ -34,8 +34,6 @@ func _ready() -> void:
 	mental = $"Mental meter"
 	mental.value = Global.mental
 	eseme_asukohad.shuffle()
-	mõõt.visible = false
-	mental.visible = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
 # 1 tähendab menüüs olemist.
@@ -49,26 +47,28 @@ var menüüstMängut = 0
 
 func MängiNupuVajutusel():
 	$AnimationPlayer.play("MenüüstMängu")
-	olek = 2
+	await get_tree().create_timer(2).timeout
+	olek = 3
 	
 
 	
 func _process(delta: float) -> void:
 
 	if olek == 3:
+		
 		Global.rahulolu -= kummitustase*delta
 		kummitustase += 1.5*delta
 		mõõt.value = Global.rahulolu
 	
 		Global.mental += rahulolutase*delta
 		mental.value = Global.mental
-	
-	if mental.value <= 0:
-		kaotad()
-	if mõõt.value > 100:
-		mõõt.value = 100
-	if mõõt.value <= 0:
-		karista()
+		
+		if mental.value <= 0:
+			kaotad()
+		if mõõt.value > 100:
+			mõõt.value = 100
+		if mõõt.value <= 0:
+			karista()
 func esita_valik():
 	valikunumber += 1
 	if valik1 != null:
