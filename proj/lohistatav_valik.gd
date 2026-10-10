@@ -25,7 +25,7 @@ func _process(delta: float) -> void:
 		tween.tween_property($".", "position", Vector2(get_global_mouse_position()),0.04)
 		lohistab = true
 	elif lohistab == true:
-		self.global_position = get_global_mouse_position()	
+		self.global_position = get_global_mouse_position()
 	if Input.is_action_just_released("Vasak_Hiir") and lohistab == true:
 		if vanem.hiir_masinal == true:
 			keerleb = true

@@ -14,7 +14,6 @@
 [sub_resource type="Animation" id="Animation_efxa6"]
 resource_name = "MenüüstMängu"
 length = 2.0
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -216,6 +215,7 @@ script = ExtResource("1_0xm2m")
 [node name="Ghost-o-meter" type="ProgressBar" parent="." unique_id=2078773219]
 modulate = Color(0.21568628, 0.7607843, 0.69803923, 1)
 self_modulate = Color(0.24905181, 0.40623423, 0.37453306, 1)
+z_index = -2
 offset_left = 813.0
 offset_top = 495.0
 offset_right = 1676.8254
@@ -294,13 +294,14 @@ texture = ExtResource("2_0xm2m")
 script = ExtResource("8_kek77")
 
 [node name="Tuba" type="Sprite2D" parent="." unique_id=1050310947]
-z_index = -2
+z_index = -3
 texture = ExtResource("2_h2yge")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=714302648]
 libraries/ = SubResource("AnimationLibrary_efxa6")
 
 [node name="Mental meter" type="ProgressBar" parent="." unique_id=670785659]
+z_index = -2
 offset_left = 687.0901
 offset_top = 499.47003
 offset_right = 1554.4602
