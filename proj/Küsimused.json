@@ -7,34 +7,47 @@
 			["Palun anna mulle midagi punast", "res://Masinasse/punased_sokid.png"]
 		],
 		[
-			["Kas ma saaksin, midagi, mis meenutaks mulle lepatriinut?","res://Masinasse/triibuline_sark.png"],
-			["Kas ma saaksin midagi, mis meenutaks mulle zebrat","res://Masinasse/triibulised_sokid.png"],
-			["Kas ma saaksin midagi, mis meenutaks mulle malelauda", "res://Masinasse/ruuduline_sark.png"]
+			["Kas ma saaksin, midagi, mis 
+			meenutaks mulle lepatriinut?","res://Masinasse/triibuline_sark.png"],
+			["Kas ma saaksin midagi, mis 
+			meenutaks mulle zebrat","res://Masinasse/triibulised_sokid.png"],
+			["Kas ma saaksin midagi, mis 
+			meenutaks mulle malelauda", "res://Masinasse/ruuduline_sark.png"]
 		],
 		[
-			["Mulle ei meeldi oma selgroog, kas sul on midagi selle katmiseks?","res://Masinasse/kassisark.png"],
-			["Mu tuharad tuulduvad liialt. Kas sul on mulle midagi anda?.","res://Masinasse/luhikesed_puksid.png"],
-			["Mul varbad värisevad. Kas sul on selleks midagi?","res://Masinasse/mustvalged_sokid.png"]
+			["Mulle ei meeldi oma selgroog, 
+			kas sul on midagi selle katmiseks?","res://Masinasse/kassisark.png"],
+			["Mu tuharad tuulduvad liialt. Kas sul 
+			on mulle midagi anda?.","res://Masinasse/luhikesed_puksid.png"],
+			["Mul varbad värisevad. Kas sul 
+			on selleks midagi?","res://Masinasse/mustvalged_sokid.png"]
 		],
 		[
-			["Sa oled mulle juba palju riideid andnud, kuhu neid panna?","res://Masinasse/riidepuu.png"],
+			["Sa oled mulle juba palju riideid 
+			andnud, kuhu neid panna?","res://Masinasse/riidepuu.png"],
 			["Mul hakkas janu. On juua?","res://Masinasse/seebipudel.png"],
-			["Ööd on siin konkus külmad. On midagi anda?","res://Masinasse/magamiskott.png"]
+			["Ööd on siin konkus külmad. 
+			On midagi anda?","res://Masinasse/magamiskott.png"]
 		],
 		[
-			["Mulle meeldivad nunnud loomad. Äkki teed varajase sünna kingi?","res://Masinasse/kassisark.png"],
-			["Ma olen õuduka maratonil. On sul midagi õudsat?","res://Masinasse/krokodillisark.png"],
-			["Mul on täna eksperimentaalne tuju. On sul midagi veidrat, aga samas huvitavat?","res://Masinasse/nokkloomasark.png"]
+			["Mulle meeldivad nunnud loomad.
+			Äkki teed varajase sünna kingi?","res://Masinasse/kassisark.png"],
+			["Ma olen õuduka maratonil. 
+			On sul midagi õudsat?","res://Masinasse/krokodillisark.png"],
+			["Mul on täna eksperimentaalne tuju.
+			On sul midagi veidrat, aga samas huvitavat?","res://Masinasse/nokkloomasark.png"]
 		],
 		[
-			["Mu kõht on üks tühi auk, auke on palju, anna auke.","res://Masinasse/AUKLIKUD_SOKID.png"],
-			["Anna midagi, millel on just parajalt auke","res://Masinasse/ruuduline_sark.png"],
+			["Mu kõht on üks tühi auk, auke on
+			palju, anna auke.","res://Masinasse/AUKLIKUD_SOKID.png"],
+			["Anna midagi, millel on just
+			parajalt auke","res://Masinasse/ruuduline_sark.png"],
 			["Riidemaailmas läheb kõik koguaeg august sisse. Anna midagi aukudeta","res://Masinasse/aukudeta_alukad.png"]
 		],
 		[
 			["Pulma","res://Masinasse/pulmakleit.png"],
 			["Matusele","res://Masinasse/umbrella.png"],
-			["Sünnitusele",""]
+			["Sünnitusele","res://Masinasse/Haigekittel.png"]
 		],
 		[
 			["Süüa","res://Masinasse/lihakantsakas.png"],
