@@ -20,6 +20,9 @@ var pesumasinastseen
 var pesumasin
 var kummitustase = 1
 
+var teksti_kiirus = 0.1
+var küsimus
+var variandid
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Menuu/Mangi.pressed.connect(MängiNupuVajutusel)
@@ -73,7 +76,6 @@ func _process(delta: float) -> void:
 	if olek==1:
 		MenüüsOlemine()
 	if olek==2:
-		print("Kood siin!")
 		MenüüstMänguMinek(delta)
 		#MenüüstMänguMinek(delta)
 		
@@ -89,9 +91,9 @@ func esita_valik():
 	if valik3 != null:
 		valik3.queue_free()
 	nr = randi_range(0,2)
-	var küsimus = Global.võimalikud_küsimused[valikunumber]
-	$Tekstimull.text = küsimus[nr]
-	var variandid = Global.võimalikud_vastused[valikunumber]
+	küsimus = Global.võimalikud_küsimused[valikunumber]
+	lisa_tekst()
+	variandid = Global.võimalikud_vastused[valikunumber]
 	vastus = variandid[nr]
 	
 	valikustseen = preload("res://lohistatav_valik.tscn")
@@ -127,3 +129,10 @@ func hiirekontroll():
 		hiir_masinal = false
 	elif hiir_masinal == false:
 		hiir_masinal = true
+func lisa_tekst():
+	print(küsimus[nr])
+	$Tekstimull.text = str(küsimus[nr])
+	$Tekstimull.visible_characters = 0
+	for i in range($Tekstimull.text.length()):
+		$Tekstimull.visible_characters = i+1
+		await get_tree().create_timer(teksti_kiirus).timeout
