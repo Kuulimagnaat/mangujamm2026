@@ -50,6 +50,16 @@ var võimalikud_küsimused = [küsimus1, küsimus2, küsimus3, küsimus4, küsim
 var võimalikud_vastused = [vastus1, vastus2, vastus3, vastus4]#vastus5, vastus6, vastus7, vastus8, vastus9, vastus10, vastus11, vastus12, vastus13, vastus14, vastus15, 
 #vastus16, vastus17, vastus18, vastus19, vastus20]
 
+
 func _ready() -> void:
 	rahulolu = 50
 	mental = 50
+	var file = FileAccess.open("res://Küsimused.json", FileAccess.READ)
+	var json_string = file.get_as_text()
+	var json = JSON.new()
+	var result = json.parse(json_string)
+	var andmed = json.data
+	print(andmed)
+	print(andmed["küs"])
+	
+	
