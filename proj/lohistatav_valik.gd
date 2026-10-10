@@ -4,6 +4,7 @@ var lohistab = false
 var hiir_valikul = false
 var og_pos
 var vanem
+var õige = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	vanem = get_parent()
@@ -33,4 +34,9 @@ func _process(delta: float) -> void:
 		tween.tween_property($".", "position", Vector2(og_pos), 0.4)
 		
 func masinasse():
-	queue_free()
+	if õige == true:
+		Global.rahulolu += 20
+		vanem.kummitustase = 1
+	else:
+		Global.rahulolu -= 10
+	vanem.esita_valik()
