@@ -14,12 +14,12 @@ var valik1
 var valik2
 var valik3
 
-var eseme_asukohad = [Vector2(-400,300), Vector2(0,300), Vector2(400,300)]
+var eseme_asukohad = [Vector2(-400,1000), Vector2(0,1000), Vector2(400,1000)]
 var hiir_masinal = false
 var hiireotsas = null
 var pesumasinastseen
 var pesumasin
-var kummitustase = 3
+var kummitustase = 1.5
 var rahulolutase = 3
 
 var teksti_kiirus = 0.02
@@ -36,6 +36,7 @@ func _ready() -> void:
 	mental = $"Mental meter"
 	mental.value = Global.mental
 	eseme_asukohad.shuffle()
+	$Tekstimull.visible = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
 # 1 tähendab menüüs olemist.
@@ -47,6 +48,15 @@ var olek = 2
 var menüüstMänguT = 1
 var menüüstMängut = 0
 
+func eemalda_riided():
+	var tween = get_tree().create_tween()
+	tween.set_parallel()
+	if valik1.keerleb == false:
+		tween.tween_property(valik1, "position", Vector2(valik1.position.x,1000),0.4)
+	if valik2.keerleb == false:
+		tween.tween_property(valik2, "position", Vector2(valik2.position.x,1000),0.4)
+	if valik3.keerleb == false:
+		tween.tween_property(valik3, "position", Vector2(valik3.position.x,1000),0.4)
 func MängiNupuVajutusel():
 	$AnimationPlayer.play("MenüüstMängu")
 	await get_tree().create_timer(2).timeout
@@ -60,7 +70,7 @@ func _process(delta: float) -> void:
 	if olek == 3:
 		
 		Global.rahulolu -= kummitustase*delta
-		kummitustase += 1.5*delta
+		kummitustase += 0.5*delta
 		mõõt.value = Global.rahulolu
 	
 		Global.mental += rahulolutase*delta
@@ -120,6 +130,7 @@ func hiirekontroll():
 	elif hiir_masinal == false:
 		hiir_masinal = true
 func lisa_tekst(küsimus):
+	$Tekstimull.visible = true
 	$Tekstimull.text = küsimus
 	$Tekstimull.visible_characters = 0
 	for i in range($Tekstimull.text.length()):

@@ -61,6 +61,5 @@ func _ready() -> void:
 	var result = json.parse(json_string)
 	var andmed = json.data
 	küs = andmed["küs"]
-	print(küs)
 	
 	

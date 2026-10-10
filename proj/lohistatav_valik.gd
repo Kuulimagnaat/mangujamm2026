@@ -5,9 +5,12 @@ var hiir_valikul = false
 var og_pos
 var vanem
 var õige = false
-var keerleb
+var keerleb = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	var tween = get_tree().create_tween()
+	tween.set_parallel()
+	tween.tween_property(self, "position:y",300, 0.5)
 	vanem = get_parent()
 	z_index = 8
 	$Area2D.mouse_entered.connect(hiirekontroll)
@@ -29,7 +32,9 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_released("Vasak_Hiir") and lohistab == true:
 		if vanem.hiir_masinal == true:
 			keerleb = true
+			vanem.eemalda_riided()
 			masinasse()
+			
 		else:
 			var tween = get_tree().create_tween()
 			tween.tween_property($".", "position", Vector2(og_pos), 0.4)
@@ -50,5 +55,4 @@ func masinasse():
 		vanem.kummitustase = 1
 	else:
 		Global.rahulolu -= 10
-	keerleb = true
 	
