@@ -5,6 +5,7 @@ var timer
 
 var nr
 var vastus
+var valikud
 
 var valikunumber = -1
 
@@ -21,7 +22,7 @@ var pesumasin
 var kummitustase = 3
 var rahulolutase = 3
 
-var teksti_kiirus = 0.1
+var teksti_kiirus = 0.02
 var küsimus
 var variandid
 
@@ -49,6 +50,7 @@ func MängiNupuVajutusel():
 	$AnimationPlayer.play("MenüüstMängu")
 	await get_tree().create_timer(2).timeout
 	olek = 3
+	esita_valik()
 	
 
 	
@@ -78,10 +80,10 @@ func esita_valik():
 	if valik3 != null:
 		valik3.queue_free()
 	nr = randi_range(0,2)
-	küsimus = Global.võimalikud_küsimused[valikunumber]
-	lisa_tekst()
-	variandid = Global.võimalikud_vastused[valikunumber]
-	vastus = variandid[nr]
+	küsimus = Global.küs[valikunumber][nr][0]
+	lisa_tekst(küsimus)
+	variandid =  [Global.küs[valikunumber][0][1], Global.küs[valikunumber][1][1], Global.küs[valikunumber][2][1]]
+	vastus = Global.küs[valikunumber][nr][1]
 	
 	valikustseen = preload("res://lohistatav_valik.tscn")
 	
@@ -90,21 +92,21 @@ func esita_valik():
 	valik1.position = eseme_asukohad[0]
 	valik1.og_pos = valik1.position
 	
-	valik1.get_child(1).texture = variandid[0]
+	valik1.get_child(1).texture = load(variandid[0])
 	
 	valik2 = valikustseen.instantiate()
 	add_child(valik2)
 	valik2.position = eseme_asukohad[1]
 	valik2.og_pos = valik2.position
 	
-	valik2.get_child(1).texture = variandid[1]
+	valik2.get_child(1).texture = load(variandid[1])
 	
 	valik3 = valikustseen.instantiate()
 	add_child(valik3)
 	valik3.position = eseme_asukohad[2]
 	valik3.og_pos = valik3.position
-	valik3.get_child(1).texture = variandid[2]
-	
+	valik3.get_child(1).texture = load(variandid[2])
+
 	if nr == 0:
 		valik1.õige = true
 	elif nr == 1:
@@ -116,8 +118,8 @@ func hiirekontroll():
 		hiir_masinal = false
 	elif hiir_masinal == false:
 		hiir_masinal = true
-func lisa_tekst():
-	$Tekstimull.text = str(küsimus[nr])
+func lisa_tekst(küsimus):
+	$Tekstimull.text = küsimus
 	$Tekstimull.visible_characters = 0
 	for i in range($Tekstimull.text.length()):
 		$Tekstimull.visible_characters = i+1
