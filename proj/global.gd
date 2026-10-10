@@ -2,6 +2,7 @@ extends Node
 
 var rahulolu
 var mental
+var küs
 #On vaja küsimust, sellele vastavat vastust, numbrit kui palju see kummitusi õnnelikuks teeb, numbrit kui palju see sind kurvaks teeb.
 
 var küsimus1 = ["Rohelist", "Sinist", "Punast"]
@@ -59,7 +60,6 @@ func _ready() -> void:
 	var json = JSON.new()
 	var result = json.parse(json_string)
 	var andmed = json.data
-	print(andmed)
-	print(andmed["küs"])
+	küs = andmed["küs"]
 	
 	

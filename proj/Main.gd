@@ -5,6 +5,7 @@ var timer
 
 var nr
 var vastus
+var valikud
 
 var valikunumber = -1
 
@@ -13,29 +14,29 @@ var valik1
 var valik2
 var valik3
 
-var eseme_asukohad = [Vector2(-400,300), Vector2(0,300), Vector2(400,300)]
+var eseme_asukohad = [Vector2(-400,1000), Vector2(0,1000), Vector2(400,1000)]
 var hiir_masinal = false
 var hiireotsas = null
 var pesumasinastseen
 var pesumasin
-var kummitustase = 3
+var kummitustase = 1.5
 var rahulolutase = 3
 
-var teksti_kiirus = 0.1
+var teksti_kiirus = 0.02
 var küsimus
 var variandid
 
 var mental
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$Menuu/Mangi.pressed.connect(MängiNupuVajutusel)
+	#$Menuu/Mangi.pressed.connect(MängiNupuVajutusel)
+	
 	mõõt = $"Ghost-o-meter"
 	mõõt.value = Global.rahulolu
 	mental = $"Mental meter"
 	mental.value = Global.mental
 	eseme_asukohad.shuffle()
-	mõõt.visible = false
-	mental.visible = false
+	$Tekstimull.visible = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
 # 1 tähendab menüüs olemist.
@@ -47,28 +48,40 @@ var olek = 2
 var menüüstMänguT = 1
 var menüüstMängut = 0
 
+func eemalda_riided():
+	var tween = get_tree().create_tween()
+	tween.set_parallel()
+	if valik1.keerleb == false:
+		tween.tween_property(valik1, "position", Vector2(valik1.position.x,1000),0.4)
+	if valik2.keerleb == false:
+		tween.tween_property(valik2, "position", Vector2(valik2.position.x,1000),0.4)
+	if valik3.keerleb == false:
+		tween.tween_property(valik3, "position", Vector2(valik3.position.x,1000),0.4)
 func MängiNupuVajutusel():
 	$AnimationPlayer.play("MenüüstMängu")
-	olek = 2
+	await get_tree().create_timer(2).timeout
+	olek = 3
+	esita_valik()
 	
 
 	
 func _process(delta: float) -> void:
 
 	if olek == 3:
+		
 		Global.rahulolu -= kummitustase*delta
-		kummitustase += 1.5*delta
+		kummitustase += 0.5*delta
 		mõõt.value = Global.rahulolu
 	
 		Global.mental += rahulolutase*delta
 		mental.value = Global.mental
-	
-	if mental.value <= 0:
-		kaotad()
-	if mõõt.value > 100:
-		mõõt.value = 100
-	if mõõt.value <= 0:
-		karista()
+		
+		if mental.value <= 0:
+			kaotad()
+		if mõõt.value > 100:
+			mõõt.value = 100
+		if mõõt.value <= 0:
+			karista()
 func esita_valik():
 	valikunumber += 1
 	if valik1 != null:
@@ -78,10 +91,10 @@ func esita_valik():
 	if valik3 != null:
 		valik3.queue_free()
 	nr = randi_range(0,2)
-	küsimus = Global.võimalikud_küsimused[valikunumber]
-	lisa_tekst()
-	variandid = Global.võimalikud_vastused[valikunumber]
-	vastus = variandid[nr]
+	küsimus = Global.küs[valikunumber][nr][0]
+	lisa_tekst(küsimus)
+	variandid =  [Global.küs[valikunumber][0][1], Global.küs[valikunumber][1][1], Global.küs[valikunumber][2][1]]
+	vastus = Global.küs[valikunumber][nr][1]
 	
 	valikustseen = preload("res://lohistatav_valik.tscn")
 	
@@ -90,21 +103,21 @@ func esita_valik():
 	valik1.position = eseme_asukohad[0]
 	valik1.og_pos = valik1.position
 	
-	valik1.get_child(1).texture = variandid[0]
+	valik1.get_child(1).texture = load(variandid[0])
 	
 	valik2 = valikustseen.instantiate()
 	add_child(valik2)
 	valik2.position = eseme_asukohad[1]
 	valik2.og_pos = valik2.position
 	
-	valik2.get_child(1).texture = variandid[1]
+	valik2.get_child(1).texture = load(variandid[1])
 	
 	valik3 = valikustseen.instantiate()
 	add_child(valik3)
 	valik3.position = eseme_asukohad[2]
 	valik3.og_pos = valik3.position
-	valik3.get_child(1).texture = variandid[2]
-	
+	valik3.get_child(1).texture = load(variandid[2])
+
 	if nr == 0:
 		valik1.õige = true
 	elif nr == 1:
@@ -116,8 +129,9 @@ func hiirekontroll():
 		hiir_masinal = false
 	elif hiir_masinal == false:
 		hiir_masinal = true
-func lisa_tekst():
-	$Tekstimull.text = str(küsimus[nr])
+func lisa_tekst(küsimus):
+	$Tekstimull.visible = true
+	$Tekstimull.text = küsimus
 	$Tekstimull.visible_characters = 0
 	for i in range($Tekstimull.text.length()):
 		$Tekstimull.visible_characters = i+1
@@ -130,3 +144,7 @@ func kaotad():
 	Global.rahulolu = 50
 	get_tree().reload_current_scene()
 	
+
+
+func _on_button_pressed() -> void:
+	MängiNupuVajutusel()

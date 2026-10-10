@@ -8,5 +8,4 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	print(value)
 	$"../Püks".region_rect.size.y = 437-2*value
