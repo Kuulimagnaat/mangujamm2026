@@ -29,11 +29,10 @@ func _ready() -> void:
 	pesumasin = pesumasinastseen.instantiate()
 	add_child(pesumasin)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	
-		Global.rahulolu -= kummitustase*delta
-		kummitustase += 2*delta
-		mõõt.value = Global.rahulolu
+func _process(delta: float) -> void:	
+	Global.rahulolu -= kummitustase*delta
+	kummitustase += 2*delta
+	mõõt.value = Global.rahulolu
 func esita_valik():
 	if valik1 != null:
 		valik1.queue_free()

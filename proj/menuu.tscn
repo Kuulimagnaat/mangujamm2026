@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://ljggaeh6wcbl"]
+
+[ext_resource type="Texture2D" uid="uid://bovd7r7x4qxsh" path="res://Joonistused/AP5.png" id="1_87rcd"]
+[ext_resource type="Texture2D" uid="uid://55rvbvcdidoy" path="res://Joonistused/AP4.png" id="2_3sf5n"]
+[ext_resource type="Script" uid="uid://ckmbqosfu3btp" path="res://Helislaider.gd" id="3_3h1bs"]
+[ext_resource type="Texture2D" uid="uid://udbvr1smfenk" path="res://Joonistused/AP2.png" id="4_bcgs2"]
+
+[node name="Menuu" type="Control" unique_id=1444201894]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Button" type="Button" parent="." unique_id=920327506]
+layout_mode = 0
+offset_left = 570.0
+offset_top = 283.0
+offset_right = 925.0
+offset_bottom = 576.0
+icon = ExtResource("1_87rcd")
+
+[node name="Button2" type="Button" parent="." unique_id=1652691530]
+layout_mode = 0
+offset_left = 1022.0
+offset_top = 335.0
+offset_right = 1187.0
+offset_bottom = 544.0
+icon = ExtResource("2_3sf5n")
+
+[node name="VSlider" type="VSlider" parent="." unique_id=398799911]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 83.0
+offset_right = 447.0
+offset_bottom = 532.0
+theme_override_icons/grabber = ExtResource("2_3sf5n")
+theme_override_icons/grabber_highlight = ExtResource("1_87rcd")
+value = 2.0
+script = ExtResource("3_3h1bs")
+
+[node name="Püks" type="Sprite2D" parent="VSlider" unique_id=1364748672]
+position = Vector2(337, 333)
+texture = ExtResource("4_bcgs2")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 252, 99.18)
