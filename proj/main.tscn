@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://nunfx0xgwbhf" path="res://Joonistused/Püks.png" id="5_kek77"]
 [ext_resource type="Texture2D" uid="uid://dobdahkoxf81o" path="res://Joonistused/Valikud.png" id="6_4c57u"]
 [ext_resource type="Script" uid="uid://cwlaesoua1f5f" path="res://sein.gd" id="8_kek77"]
+[ext_resource type="PackedScene" uid="uid://eqgn3tvg73hk" path="res://pesumasin.tscn" id="10_4c57u"]
 
 [sub_resource type="Animation" id="Animation_efxa6"]
 resource_name = "MenüüstMängu"
@@ -307,3 +308,7 @@ offset_bottom = 612.37994
 rotation = -1.5707964
 value = 50.0
 show_percentage = false
+
+[node name="Pesumasin" parent="." unique_id=1650951301 instance=ExtResource("10_4c57u")]
+position = Vector2(0, 234.885)
+scale = Vector2(0.776, 0.776)
