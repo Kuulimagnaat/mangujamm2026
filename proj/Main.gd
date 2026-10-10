@@ -3,7 +3,8 @@ extends Node2D
 var mõõt
 var timer
 var kummitab = true
-
+var valikustseen
+var valik
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	mõõt = $"Ghost-o-meter"
@@ -16,4 +17,6 @@ func _process(delta: float) -> void:
 		Global.rahulolu -= 2*delta
 		mõõt.value = Global.rahulolu
 func esita_valik():
-	
+	valikustseen = preload("res://lohistatav_valik.tscn")
+	valik = valikustseen.instantiate()
+	add_child(valik)

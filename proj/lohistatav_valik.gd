@@ -5,6 +5,7 @@ var hiir_valikul
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Area2D.mouse_entered.connect(hiirekontroll)
+	$Area2D.mouse_exited.connect(hiirekontroll)
 
 func hiirekontroll():
 	if hiir_valikul == true:
@@ -17,3 +18,5 @@ func _process(delta: float) -> void:
 		lohistab = true
 	else:
 		lohistab = false
+	if lohistab == true:
+		self.position = get_global_mouse_position()
