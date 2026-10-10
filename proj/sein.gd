@@ -1,0 +1,7 @@
+extends Sprite2D
+
+var algsuurus = 1.07
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	scale = Vector2(algsuurus, algsuurus)
+	

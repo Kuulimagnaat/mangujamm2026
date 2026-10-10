@@ -50,14 +50,16 @@ func MenüüsOlemine():
 
 func MenüüstMänguMinek(delta):
 	menüüstMängut += delta;
-	var t = (menüüstMängut/menüüstMänguT)*PI
-	var suurus = $Menuu.algsuurus + (-cos(t)/2+0.5)*$Menuu.suuruseMuut
+	var t = (menüüstMängut/menüüstMänguT)**3*PI
+	# t on kuubiga muutuv väärtus 0–PI.
+	var t2 = (-cos(t)/2+0.5)
+	# t2 on kuubiga muutub kiirenev aeglustuv
 	
 	
-	
-	$Menuu.scale = Vector2(suurus, suurus)
-	$Menuu.position.y -= suurus
-	$Sein.scale = Vector2(suurus**0.5, suurus**0.5)
+	$Menuu.scale = Vector2(1+9*t2, 1+9*t2)
+	$Menuu.position.y -= 2*t2
+	$Sein.scale = Vector2($Sein.algsuurus+2*t2, $Sein.algsuurus+2*t2)
+	$Tuba.scale = Vector2(1+0.1*t2, 1+0.1*t2)
 	
 	
 	if menüüstMängut >= menüüstMänguT:

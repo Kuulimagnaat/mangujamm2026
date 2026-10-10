@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://55rvbvcdidoy" path="res://Joonistused/AP4.png" id="3_7mycd"]
 [ext_resource type="Script" uid="uid://ckmbqosfu3btp" path="res://Helislaider.gd" id="4_272bh"]
 [ext_resource type="Texture2D" uid="uid://udbvr1smfenk" path="res://Joonistused/AP2.png" id="5_5vw27"]
+[ext_resource type="Script" uid="uid://cwlaesoua1f5f" path="res://sein.gd" id="8_kek77"]
 
 [node name="Main" type="Node2D" unique_id=705257226]
 script = ExtResource("1_0xm2m")
@@ -86,6 +87,7 @@ z_index = -1
 position = Vector2(-68, 13)
 scale = Vector2(1.074074, 1.074074)
 texture = ExtResource("2_0xm2m")
+script = ExtResource("8_kek77")
 
 [node name="Tuba" type="Sprite2D" parent="." unique_id=1050310947]
 z_index = -2
