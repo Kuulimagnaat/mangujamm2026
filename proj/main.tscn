@@ -13,7 +13,7 @@
 
 [sub_resource type="Animation" id="Animation_efxa6"]
 resource_name = "MenüüstMängu"
-length = 2.0
+length = 2.5000000000000004
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -36,7 +36,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(0.5, 1),
 "update": 0,
-"values": [Vector2(1.074074, 1.074074), Vector2(3.054, 3.054)]
+"values": [Vector2(1, 1), Vector2(3.054, 3.054)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -45,10 +45,10 @@ tracks/2/path = NodePath("Sein:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 2),
+"times": PackedFloat32Array(0, 2.5),
 "transitions": PackedFloat32Array(0.5, 1),
 "update": 0,
-"values": [Vector2(-68, 13), Vector2(-218, -368)]
+"values": [Vector2(0, 0), Vector2(-114.642, -370.76)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -98,10 +98,38 @@ tracks/6/keys = {
 "update": 0,
 "values": [Vector2(0.776, 0.776), Vector2(1, 1)]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Menuu/Nöör:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(300, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_4c57u"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Menuu/Nöör:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(300, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_efxa6"]
 _data = {
-&"MenüüstMängu": SubResource("Animation_efxa6")
+&"MenüüstMängu": SubResource("Animation_efxa6"),
+&"RESET": SubResource("Animation_4c57u")
 }
 
 [node name="Main" type="Node2D" unique_id=705257226]
