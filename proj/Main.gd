@@ -29,7 +29,16 @@ func _ready() -> void:
 	pesumasin = pesumasinastseen.instantiate()
 	add_child(pesumasin)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:	
+
+# 1 tähendab menüüs olemist.
+# 0 tähendab mängu kinnipanemist.
+# 2 tähendab mängu menüüst mängima liikumise protsessi (kestab ainult mõnd aega).
+# 3 tähendab mängus olemist.
+var olek = 1
+func _process(delta: float) -> void:
+	if olek == 1:
+		pass
+		
 	Global.rahulolu -= kummitustase*delta
 	kummitustase += 2*delta
 	mõõt.value = Global.rahulolu
