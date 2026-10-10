@@ -1,0 +1,19 @@
+{
+    "küs" :
+    [
+        [
+            ["Rohelist", "Roheline särk"],
+            ["Sinist", "Sinised teksad"],
+            ["Punast", "Punased sokid"]
+        ],
+        [
+    
+        ]
+    ],
+
+    "Vas":
+    [
+        ["Roheline särk", 10, 10],
+        ["Sinised teksad", 10, 10]
+    ]
+}

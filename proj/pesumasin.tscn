@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://eqgn3tvg73hk"]
 
+[ext_resource type="Texture2D" uid="uid://uim2ayfj75gv" path="res://Joonistused/Pesumasin 3.png" id="1_s0k3h"]
 [ext_resource type="Script" uid="uid://bh6yr7gbippbp" path="res://pesumasin.gd" id="2_bq02f"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j3w0i"]
@@ -7,6 +8,7 @@ radius = 88.23265
 
 [node name="Pesumasin" type="Sprite2D" unique_id=1650951301]
 z_index = -2
+texture = ExtResource("1_s0k3h")
 script = ExtResource("2_bq02f")
 
 [node name="RiidedSisseAla" type="Area2D" parent="." unique_id=1148682131]
