@@ -21,6 +21,7 @@ var kummitustase = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$Menuu/Mangi.pressed.connect(MängiNupuVajutusel)
 	mõõt = $"Ghost-o-meter"
 	mõõt.value = Global.rahulolu
 	eseme_asukohad.shuffle()
@@ -35,9 +36,42 @@ func _ready() -> void:
 # 2 tähendab mängu menüüst mängima liikumise protsessi (kestab ainult mõnd aega).
 # 3 tähendab mängus olemist.
 var olek = 1
+# Aeg sekundites, mis kulub, et menüüst liikude mängu.
+var menüüstMänguT = 1
+var menüüstMängut = 0
+
+func MängiNupuVajutusel():
+	olek = 2
+
+func MenüüsOlemine():
+	pass
+
+
+
+func MenüüstMänguMinek(delta):
+	menüüstMängut += delta;
+	var t = (menüüstMängut/menüüstMänguT)*PI
+	var suurus = $Menuu.algsuurus + (-cos(t)/2+0.5)*$Menuu.suuruseMuut
+	
+	
+	
+	$Menuu.scale = Vector2(suurus, suurus)
+	$Menuu.position.y -= suurus
+	$Sein.scale = Vector2(suurus**0.5, suurus**0.5)
+	
+	
+	if menüüstMängut >= menüüstMänguT:
+		menüüstMängut = 0
+		olek = 3
+	
+
 func _process(delta: float) -> void:
-	if olek == 1:
-		pass
+	if olek==1:
+		MenüüsOlemine()
+	if olek==2:
+		print("Kood siin!")
+		MenüüstMänguMinek(delta)
+		#MenüüstMänguMinek(delta)
 		
 	Global.rahulolu -= kummitustase*delta
 	kummitustase += 2*delta
