@@ -148,3 +148,7 @@ func kaotad():
 
 func _on_button_pressed() -> void:
 	MängiNupuVajutusel()
+
+
+func _on_exit_button_pressed() -> void:
+	get_tree().quit()
