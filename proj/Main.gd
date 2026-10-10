@@ -4,7 +4,9 @@ var mõõt
 var timer
 var kummitab = true
 var valikustseen
-var valik
+var valik1
+var valik2
+var valik3
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	mõõt = $"Ghost-o-meter"
@@ -18,5 +20,20 @@ func _process(delta: float) -> void:
 		mõõt.value = Global.rahulolu
 func esita_valik():
 	valikustseen = preload("res://lohistatav_valik.tscn")
-	valik = valikustseen.instantiate()
-	add_child(valik)
+	
+	valik1 = valikustseen.instantiate()
+	add_child(valik1)
+	valik1.position.x += 400
+	valik1.position.y += 300
+	valik1.og_pos = valik1.position
+	
+	valik2 = valikustseen.instantiate()
+	add_child(valik2)
+	valik2.position.x -= 400
+	valik2.position.y += 300
+	valik2.og_pos = valik2.position
+	
+	valik3 = valikustseen.instantiate()
+	add_child(valik3)
+	valik3.position.y += 300
+	valik3.og_pos = valik3.position
