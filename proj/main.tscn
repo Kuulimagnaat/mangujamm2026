@@ -1,14 +1,13 @@
 [gd_scene format=3 uid="uid://cqow47bch5ocs"]
 
 [ext_resource type="Script" uid="uid://crtdv5djku0ij" path="res://Main.gd" id="1_0xm2m"]
-[ext_resource type="Texture2D" uid="uid://dkufvc25vru4o" path="res://Joonistused/Ajutine pesumasin.png" id="2_h2yge"]
-[ext_resource type="Script" uid="uid://bh6yr7gbippbp" path="res://pesumasin.gd" id="3_1bvp3"]
 
 [node name="Main" type="Node2D" unique_id=705257226]
 script = ExtResource("1_0xm2m")
 
 [node name="Ghost-o-meter" type="ProgressBar" parent="." unique_id=2078773219]
-modulate = Color(0, 0.67429006, 0.6742898, 1)
+modulate = Color(0.25810486, 0.3364029, 0.33104092, 1)
+self_modulate = Color(0.6190455, 0.7331972, 0.7070782, 1)
 offset_left = 813.0
 offset_top = 495.0
 offset_right = 1676.8254
@@ -17,7 +16,3 @@ rotation = -1.5707964
 show_percentage = false
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1694286927]
-
-[node name="Pesumasin" type="Sprite2D" parent="." unique_id=1848401279]
-texture = ExtResource("2_h2yge")
-script = ExtResource("3_1bvp3")
