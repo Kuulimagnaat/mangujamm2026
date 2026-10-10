@@ -5,16 +5,17 @@ var välimus2
 var välimus3
 var välimus4
 var välimus5
-
+var vanem
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	vanem = get_parent()
 	välimus1 = load("res://Joonistused/Ajutine pesumasin.png")
 	välimus2 = load("res://Joonistused/AP2.png")
 	välimus3 = load("res://Joonistused/AP3.png")
 	välimus4 = load("res://Joonistused/AP4.png")
 	välimus5 = load("res://Joonistused/AP5.png")
-
-
+	$RiidedSisseAla.mouse_entered.connect(vanem.hiirekontroll)
+	$RiidedSisseAla.mouse_exited.connect(vanem.hiirekontroll)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Global.rahulolu < 20:
