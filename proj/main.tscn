@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://g0ucl476d1l8" path="res://menuu.gd" id="2_5vw27"]
 [ext_resource type="Texture2D" uid="uid://c8n5sufehykey" path="res://Joonistused/taust.png" id="2_h2yge"]
 [ext_resource type="Texture2D" uid="uid://0p40tqb8lfgv" path="res://Joonistused/Säär.png" id="3_272bh"]
+[ext_resource type="PackedScene" uid="uid://eqgn3tvg73hk" path="res://pesumasin.tscn" id="4_1bvp3"]
 [ext_resource type="Script" uid="uid://ckmbqosfu3btp" path="res://Helislaider.gd" id="4_272bh"]
 [ext_resource type="Texture2D" uid="uid://nunfx0xgwbhf" path="res://Joonistused/Püks.png" id="5_kek77"]
 [ext_resource type="Texture2D" uid="uid://dobdahkoxf81o" path="res://Joonistused/Valikud.png" id="6_4c57u"]
@@ -35,7 +36,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(0.5, 1),
 "update": 0,
-"values": [Vector2(1.074074, 1.074074), Vector2(3.054, 3.054)]
+"values": [Vector2(1, 1), Vector2(3.054, 3.054)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -47,7 +48,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(0.5, 1),
 "update": 0,
-"values": [Vector2(-68, 13), Vector2(-218, -368)]
+"values": [Vector2(0, 0), Vector2(-218, -368)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -86,7 +87,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1.074074, 1.074074)]
+"values": [Vector2(1, 1)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -98,7 +99,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-68, 13)]
+"values": [Vector2(0, 0)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -116,18 +117,6 @@ tracks/3/keys = {
 [sub_resource type="Animation" id="Animation_4c57u"]
 resource_name = "new_animation"
 length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Menuu:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_efxa6"]
 _data = {
@@ -170,8 +159,6 @@ theme_override_font_sizes/font_size = 30
 [node name="Menuu" type="Control" parent="." unique_id=136811666]
 layout_mode = 3
 anchors_preset = 0
-offset_left = -300.0
-offset_right = -300.0
 script = ExtResource("2_5vw27")
 
 [node name="Mangi" type="Button" parent="Menuu" unique_id=1135193109]
@@ -214,8 +201,6 @@ texture = ExtResource("6_4c57u")
 
 [node name="Sein" type="Sprite2D" parent="." unique_id=401554642]
 z_index = -1
-position = Vector2(-68, 13)
-scale = Vector2(1.074074, 1.074074)
 texture = ExtResource("2_0xm2m")
 script = ExtResource("8_kek77")
 
@@ -225,3 +210,5 @@ texture = ExtResource("2_h2yge")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=714302648]
 libraries/ = SubResource("AnimationLibrary_efxa6")
+
+[node name="Pesumasin" parent="." unique_id=1650951301 instance=ExtResource("4_1bvp3")]

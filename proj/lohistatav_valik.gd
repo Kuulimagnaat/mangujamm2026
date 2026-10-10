@@ -37,7 +37,7 @@ func _process(delta: float) -> void:
 		
 	if keerleb == true:
 		var tween = get_tree().create_tween()
-		tween.tween_property($".","position", Vector2(vanem.pesumasin.position), 0.2)
+		tween.tween_property($".","position", get_parent().get_node("Pesumasin").position, 0.2)
 		rotation += 3*delta
 		scale.y -=0.5*delta
 		scale.x -=0.5*delta
