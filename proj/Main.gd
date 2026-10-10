@@ -18,7 +18,7 @@ var hiir_masinal = false
 var hiireotsas = null
 var pesumasinastseen
 var pesumasin
-var kummitustase = 1
+var kummitustase = 1.2
 
 var teksti_kiirus = 0.1
 var küsimus
@@ -54,7 +54,7 @@ func _process(delta: float) -> void:
 	
 		
 	Global.rahulolu -= kummitustase*delta
-	kummitustase += 1*delta
+	kummitustase += 1.5*delta
 	mõõt.value = Global.rahulolu
 func esita_valik():
 	valikunumber += 1
