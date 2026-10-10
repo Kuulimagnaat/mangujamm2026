@@ -35,7 +35,8 @@
 			["Ma olen õuduka maratonil. 
 			On sul midagi õudsat?","res://Masinasse/krokodillisark.png"],
 			["Mul on täna eksperimentaalne tuju.
-			On sul midagi veidrat, aga samas huvitavat?","res://Masinasse/nokkloomasark.png"]
+			On sul midagi veidrat, aga samas
+			huvitavat?","res://Masinasse/nokkloomasark.png"]
 		],
 		[
 			["Mu kõht on üks tühi auk, auke on
@@ -45,17 +46,17 @@
 			["Riidemaailmas läheb kõik koguaeg august sisse. Anna midagi aukudeta","res://Masinasse/aukudeta_alukad.png"]
 		],
 		[
-			["Pulma","res://Masinasse/pulmakleit.png"],
-			["Matusele","res://Masinasse/umbrella.png"],
-			["Sünnitusele","res://Masinasse/Haigekittel.png"]
+			["Ma olen valmis veetma oma ülejäänud elu kellegi teisega. Mida pakud?","res://Masinasse/pulmakleit.png"],
+			["Naabermaja pesumasin läks katki. Kogu tänav leinab teda. On vaja matusteks valmistuda","res://Masinasse/umbrella.png"],
+			["Kõhus keerab, mul on tunne nagu varsti tuleks mus uksest teine pesumasin välja. Ma pean olema valmis.","res://Masinasse/Haigekittel.png"]
 		],
 		[
-			["Süüa","res://Masinasse/lihakantsakas.png"],
-			["Meelelahutuseks","res://Masinasse/raamat.png"],
-			["Magamiseks","res://Masinasse/unetabletid.png"]
+			["Kas sa ei arva, et ma olen äkki kõhnaks jäämas. ... Minu vanaema kord ütles, et mida rohkem, seda uhkem.","res://Masinasse/lihakantsakas.png"],
+			["Mul on igaaavvv!","res://Masinasse/raamat.png"],
+			["Viimastel õhtutel oled visanud nii palju riideid minu sisse. Ma saan vaevu sõba silmale. Tee midagi!","res://Masinasse/unetabletid.png"]
 		],
 		[
-			["Tulevikust",""],
+			["Tulevikust","res://Masinasse/Tulnukamuts.png"],
 			["Vana",""],
 			["Tänapäevast","res://Masinasse/Sinised teksad.png"]
 		],

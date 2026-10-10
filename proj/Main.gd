@@ -19,14 +19,12 @@ var hiir_masinal = false
 var hiireotsas = null
 var pesumasinastseen
 var pesumasin
-var kummitustase = 1.5
+var kummitustase = 2
 var rahulolutase = 3
 
 var teksti_kiirus = 0.02
 var küsimus
 var variandid
-
-var mental
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#$Menuu/Mangi.pressed.connect(MängiNupuVajutusel)
@@ -34,8 +32,6 @@ func _ready() -> void:
 	#mõõt = $"Ghost-o-meter"
 	mõõt = $"Progress/Ghost-o-meter"
 	mõõt.value = Global.rahulolu
-	mental = $"Mental meter"
-	mental.value = Global.mental
 	eseme_asukohad.shuffle()
 	$Tekstimull.visible = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -73,16 +69,11 @@ func _process(delta: float) -> void:
 		Global.rahulolu -= kummitustase*delta
 		kummitustase += 0.5*delta
 		mõõt.value = Global.rahulolu
-	
-		Global.mental += rahulolutase*delta
-		mental.value = Global.mental
 		
-		if mental.value <= 0:
-			kaotad()
 		if mõõt.value > 100:
 			mõõt.value = 100
 		if mõõt.value <= 0:
-			karista()
+			kaotad()
 func esita_valik():
 	valikunumber += 1
 	if valik1 != null:
@@ -137,11 +128,8 @@ func lisa_tekst(küsimus):
 	for i in range($Tekstimull.text.length()):
 		$Tekstimull.visible_characters = i+1
 		await get_tree().create_timer(teksti_kiirus).timeout
-func karista():
-	Global.mental -= 66
-	Global.rahulolu = 50
+
 func kaotad():
-	Global.mental = 50
 	Global.rahulolu = 50
 	get_tree().reload_current_scene()
 	

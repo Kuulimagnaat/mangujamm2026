@@ -17,6 +17,7 @@ func _ready() -> void:
 	$Area2D.mouse_exited.connect(hiirekontroll)
 	scale*=0.8
 func hiirekontroll():
+	og_pos = self.position
 	if hiir_valikul == true and not Input.is_action_pressed("Vasak_Hiir"):
 		hiir_valikul = false
 	elif hiir_valikul == false:
@@ -32,7 +33,6 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_released("Vasak_Hiir") and lohistab == true:
 		if vanem.hiir_masinal == true:
 			keerleb = true
-			vanem.eemalda_riided()
 			masinasse()
 			
 		else:
@@ -50,9 +50,10 @@ func _process(delta: float) -> void:
 		if self.modulate.a <= 0:
 			vanem.esita_valik()
 func masinasse():
+	vanem.eemalda_riided()
 	if õige == true:
 		Global.rahulolu += 20
 		vanem.kummitustase = 1
 	else:
-		Global.rahulolu -= 10
+		Global.rahulolu -= 40
 	
