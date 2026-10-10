@@ -28,7 +28,8 @@ var variandid
 var mental
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$Menuu/Mangi.pressed.connect(MängiNupuVajutusel)
+	#$Menuu/Mangi.pressed.connect(MängiNupuVajutusel)
+	
 	mõõt = $"Ghost-o-meter"
 	mõõt.value = Global.rahulolu
 	mental = $"Mental meter"
@@ -130,3 +131,7 @@ func kaotad():
 	Global.rahulolu = 50
 	get_tree().reload_current_scene()
 	
+
+
+func _on_button_pressed() -> void:
+	MängiNupuVajutusel()

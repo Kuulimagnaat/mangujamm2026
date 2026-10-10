@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://dobdahkoxf81o" path="res://Joonistused/Valikud.png" id="6_4c57u"]
 [ext_resource type="Script" uid="uid://cwlaesoua1f5f" path="res://sein.gd" id="8_kek77"]
 [ext_resource type="PackedScene" uid="uid://eqgn3tvg73hk" path="res://pesumasin.tscn" id="10_4c57u"]
+[ext_resource type="Script" uid="uid://bvllfa5sx50vb" path="res://sarknupp.gd" id="11_dg77c"]
+[ext_resource type="Texture2D" uid="uid://btgilldkqx0xx" path="res://Joonistused/enter.png" id="11_efxa6"]
 
 [sub_resource type="Animation" id="Animation_efxa6"]
 resource_name = "MenüüstMängu"
@@ -106,9 +108,21 @@ tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
 "times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
+"transitions": PackedFloat32Array(0.42044842, 1),
 "update": 0,
 "values": [Vector2(300, 0), Vector2(0, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("sarknupp:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1.96),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(10, 10)]
 }
 
 [sub_resource type="Animation" id="Animation_4c57u"]
@@ -116,14 +130,14 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Menuu/Nöör:position")
+tracks/0/path = NodePath("sarknupp:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(300, 0)]
+"values": [Vector2(1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_efxa6"]
@@ -170,13 +184,6 @@ anchors_preset = 0
 offset_left = -300.0
 offset_right = -300.0
 script = ExtResource("2_5vw27")
-
-[node name="Mangi" type="Button" parent="Menuu" unique_id=1135193109]
-layout_mode = 0
-offset_left = -161.0
-offset_top = -375.0
-offset_right = 194.0
-offset_bottom = -82.0
 
 [node name="Valja" type="Button" parent="Menuu" unique_id=91706466]
 layout_mode = 0
@@ -236,3 +243,20 @@ show_percentage = false
 [node name="Pesumasin" parent="." unique_id=1650951301 instance=ExtResource("10_4c57u")]
 position = Vector2(0, 234.885)
 scale = Vector2(0.776, 0.776)
+
+[node name="sarknupp" type="Node2D" parent="." unique_id=1262396135]
+script = ExtResource("11_dg77c")
+
+[node name="Sprite2D" type="Sprite2D" parent="sarknupp" unique_id=290715237]
+texture = ExtResource("11_efxa6")
+
+[node name="Button" type="Button" parent="sarknupp/Sprite2D" unique_id=2141296948]
+offset_left = -88.0
+offset_top = -260.0
+offset_right = 121.0
+offset_bottom = -58.0
+flat = true
+
+[connection signal="mouse_entered" from="sarknupp/Sprite2D/Button" to="sarknupp" method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="sarknupp/Sprite2D/Button" to="sarknupp" method="_on_button_mouse_exited"]
+[connection signal="pressed" from="sarknupp/Sprite2D/Button" to="." method="_on_button_pressed"]
