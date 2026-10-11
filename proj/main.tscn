@@ -33,6 +33,7 @@
 [ext_resource type="AudioStream" uid="uid://yhvswc1ma4y3" path="res://audio/562976__conblast__disturbing-ding-ding.wav" id="29_qsp4k"]
 [ext_resource type="Texture2D" uid="uid://c3m8a7liouc8n" path="res://Joonistused/valge.png" id="30_kq58d"]
 [ext_resource type="AudioStream" uid="uid://cgig6iqnhb85h" path="res://audio/802484__sadiquecat__whoosh-plastic-hanger-2-middle-clip-3.wav" id="30_seu75"]
+[ext_resource type="AudioStream" uid="uid://bsrimjso0yv20" path="res://audio/872014__qubodup__alien-word.ogg" id="33_4k2k6"]
 [ext_resource type="Texture2D" uid="uid://ckhrf7ubg5h5v" path="res://Placeholder/Screenshot 2026-10-11 141520.png" id="34_4k2k6"]
 
 [sub_resource type="Animation" id="Animation_4k2k6"]
@@ -651,7 +652,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_uatky")
 }],
-"loop": false,
+"loop": 0,
 "name": &"default",
 "speed": 8.0
 }]
@@ -829,7 +830,7 @@ autoplay = true
 
 [node name="togame" type="AudioStreamPlayer" parent="audioplayers" unique_id=1061622391]
 stream = ExtResource("23_d13ii")
-volume_db = 10.179
+volume_db = 11.283
 
 [node name="wrongitem" type="AudioStreamPlayer" parent="audioplayers" unique_id=1329626953]
 stream = ExtResource("24_1u8w0")
@@ -837,9 +838,14 @@ volume_db = -0.245
 
 [node name="correct" type="AudioStreamPlayer" parent="audioplayers" unique_id=1052531647]
 stream = ExtResource("29_qsp4k")
+volume_db = 4.086
 
 [node name="selectplay" type="AudioStreamPlayer" parent="audioplayers" unique_id=1211324992]
 stream = ExtResource("30_seu75")
+
+[node name="talk" type="AudioStreamPlayer" parent="audioplayers" unique_id=1945861935]
+stream = ExtResource("33_4k2k6")
+volume_db = -1.744
 
 [node name="Valge" type="Sprite2D" parent="." unique_id=1387452283]
 z_index = 40
