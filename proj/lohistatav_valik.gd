@@ -60,7 +60,7 @@ func masinasse():
 	keerleb = true
 	vanem.eemalda_riided()
 	
-	var auhind = 30
+	var auhind = 20
 	
 	if õige == true:
 		Global.rahulolu = max(Global.rahulolu - auhind, 0)
