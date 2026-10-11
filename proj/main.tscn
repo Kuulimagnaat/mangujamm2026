@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cnw7cjp8dpv3l" path="res://Joonistused/Tekstimull.png" id="2_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://0p40tqb8lfgv" path="res://Joonistused/Säär.png" id="3_272bh"]
 [ext_resource type="Script" uid="uid://ckmbqosfu3btp" path="res://Helislaider.gd" id="4_272bh"]
+[ext_resource type="StyleBox" uid="uid://cesndpd71x5ue" path="res://style/style_box_flat2.tres" id="5_getpj"]
 [ext_resource type="Texture2D" uid="uid://nunfx0xgwbhf" path="res://Joonistused/Püks.png" id="5_kek77"]
 [ext_resource type="Texture2D" uid="uid://dobdahkoxf81o" path="res://Joonistused/Valikud.png" id="6_4c57u"]
 [ext_resource type="Script" uid="uid://cwlaesoua1f5f" path="res://sein.gd" id="8_kek77"]
@@ -17,6 +18,10 @@
 [ext_resource type="Texture2D" uid="uid://cyr16u4lkcud7" path="res://Joonistused/not_exit.png" id="14_w48qg"]
 [ext_resource type="Texture2D" uid="uid://b10i6exeggkjj" path="res://Joonistused/progress.png" id="16_2cqfq"]
 [ext_resource type="StyleBox" uid="uid://8of6sggdiu1t" path="res://style/new_style_box_flat.tres" id="17_yaehf"]
+[ext_resource type="AudioStream" uid="uid://bqskilgysut6h" path="res://audio/848312__dwswords__glass-smash.wav" id="18_074og"]
+[ext_resource type="AudioStream" uid="uid://btjr7ua7m7cgf" path="res://audio/401756__zenithinfinitivestudios__glitch_robot.wav" id="19_cegan"]
+[ext_resource type="AudioStream" uid="uid://2k1ee2daay12" path="res://audio/109191__ryding__washingmachine.wav" id="20_82xsv"]
+[ext_resource type="AudioStream" uid="uid://carany5pxkat4" path="res://audio/232244__nick121087__cup-shelf-rattling.wav" id="22_ryguw"]
 
 [sub_resource type="Animation" id="Animation_efxa6"]
 resource_name = "MenüüstMängu"
@@ -270,7 +275,7 @@ offset_bottom = 60.269684
 scale = Vector2(1.205, 1.205)
 theme_override_icons/grabber = ExtResource("3_272bh")
 theme_override_icons/grabber_highlight = ExtResource("3_272bh")
-value = 2.0
+theme_override_styles/slider = ExtResource("5_getpj")
 script = ExtResource("4_272bh")
 
 [node name="Nöör" type="Sprite2D" parent="Menuu" unique_id=1331890702]
@@ -345,6 +350,25 @@ rotation = -1.5707964
 theme_override_styles/fill = ExtResource("17_yaehf")
 value = 41.4
 show_percentage = false
+
+[node name="audioplayers" type="Node" parent="." unique_id=1404463273]
+
+[node name="GlassBreak" type="AudioStreamPlayer" parent="audioplayers" unique_id=439890735]
+stream = ExtResource("18_074og")
+volume_db = 21.702
+
+[node name="glich" type="AudioStreamPlayer" parent="audioplayers" unique_id=876988224]
+stream = ExtResource("19_cegan")
+
+[node name="washingmachine" type="AudioStreamPlayer" parent="audioplayers" unique_id=1123437856]
+stream = ExtResource("20_82xsv")
+autoplay = true
+bus = &"outofroomfx"
+
+[node name="shelfrattling" type="AudioStreamPlayer" parent="audioplayers" unique_id=270025782]
+stream = ExtResource("22_ryguw")
+volume_db = -8.831
+autoplay = true
 
 [connection signal="mouse_entered" from="sarknupp/Sprite2D/Button" to="sarknupp" method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="sarknupp/Sprite2D/Button" to="sarknupp" method="_on_button_mouse_exited"]

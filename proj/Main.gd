@@ -25,6 +25,12 @@ var rahulolutase = 3
 var teksti_kiirus = 0.02
 var küsimus
 var variandid
+
+@onready var outofroomfx = AudioServer.get_bus_index("outofroomfx")
+@onready var eq = AudioServer.get_bus_effect(outofroomfx, 0)
+
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#$Menuu/Mangi.pressed.connect(MängiNupuVajutusel)
@@ -46,7 +52,7 @@ var menüüstMänguT = 1
 var menüüstMängut = 0
 
 func eemalda_riided():
-	var tween = get_tree().create_tween()
+	var tween = create_tween()
 	tween.set_parallel()
 	if valik1.keerleb == false:
 		tween.tween_property(valik1, "position", Vector2(valik1.position.x,1000),0.4)
@@ -59,8 +65,29 @@ func MängiNupuVajutusel():
 	await get_tree().create_timer(3).timeout
 	olek = 3
 	esita_valik()
-	
 
+
+var eq_tween: Tween
+func audioFX_change():
+	if eq_tween and eq_tween.is_running():
+		eq_tween.kill()
+	
+	eq_tween = create_tween()
+	var time = 1.5
+	
+	#var current_gain = eq_effect.get_band_gain_db(band_index)
+	eq_tween.set_parallel(true)
+	
+	for i in range(eq.get_band_count()):
+		eq_tween.tween_method(func(value: float): eq.set_band_gain_db(i, value), eq.get_band_gain_db(i), 0, time).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	
+	eq_tween.tween_method(func(v:float): AudioServer.set_bus_volume_db(outofroomfx, linear_to_db(v)), AudioServer.get_bus_volume_linear(outofroomfx), 0.2, time).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+
+	eq_tween.tween_property($audioplayers/shelfrattling, "volume_db", -80, time)
+	#$audioplayers/shelfrattling.stop()
+	
+	
+	
 	
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("lisa"):
@@ -137,6 +164,7 @@ func kaotad():
 
 
 func _on_button_pressed() -> void:
+	audioFX_change()
 	MängiNupuVajutusel()
 
 
