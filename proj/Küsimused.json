@@ -97,9 +97,9 @@
 			["Sa pead oma tarkust mulle tõestama, anna mulle midagi vamulgstet.","res://Masinasse/mustvalged_sokid.png"]
 		],
 		[
-			["Oled olnud ustav teener. OHVERDA KÕIK!","res://Placeholder/blu.png"],
-			["Oled olnud ustav teener. OHVERDA KÕIK!","res://Placeholder/blu.png"],
-			["Oled olnud ustav teener. OHVERDA KÕIK!","res://Placeholder/blu.png"]
+			["Oled olnud ustav teener. OHVERDA KÕIK!",""],
+			["Oled olnud ustav teener. OHVERDA KÕIK!","res://Masinasse/viimane_ohverdus.png"],
+			["Oled olnud ustav teener. OHVERDA KÕIK!",""]
 		],
 	],
 
