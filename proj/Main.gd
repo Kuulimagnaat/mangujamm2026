@@ -22,7 +22,7 @@ var hiir_masinal = false
 var hiireotsas = null
 var pesumasinastseen
 var pesumasin
-var kummitustase = 2
+var kummitustase = 1.7
 
 var teksti_kiirus = 0.02
 var küsimus
@@ -50,7 +50,7 @@ func _ready() -> void:
 	#mõõt = $"Ghost-o-meter"
 	mõõt = $"Progress/Ghost-o-meter"
 	mõõt.value = Global.rahulolu
-	eseme_asukohad.shuffle()
+	
 	$Tekstimull.visible = false
 	
 	for i in range(eq.get_band_count()):
@@ -113,7 +113,7 @@ func _process(delta: float) -> void:
 		valikunumber = 18
 	if olek == 3 and jookseb == true:
 		Global.rahulolu += kummitustase*delta
-		kummitustase += 0.5*delta
+		kummitustase += 0.6*delta
 		mõõt.value = Global.rahulolu
 		if mõõt.value <= 0:
 			Global.rahulolu = 0
@@ -152,7 +152,7 @@ func play_animation():
 		$Valge.visible = true
 		$"Menu screenshot".visible = true
 		$AnimationPlayer.play("Fade")
-		await get_tree().create_timer(2).timeout
+		await get_tree().create_timer(1).timeout
 		reset()
 	jookseb = true
 		#Siia läheb mehe animatsioon.
@@ -165,9 +165,10 @@ func esita_valik():
 		valik2.queue_free()
 	if valik3 != null:
 		valik3.queue_free()
-	if valikunumber == 14 or valikunumber == 20:
-		nr = 0	
+	if valikunumber == 14 or valikunumber == 19:
+		nr = 0
 	else:	
+		eseme_asukohad.shuffle()
 		nr = randi_range(0,2)
 	küsimus = Global.küs[valikunumber][nr][0]
 	lisa_tekst(küsimus)
@@ -195,16 +196,23 @@ func esita_valik():
 	valik3.position = eseme_asukohad[2]
 	valik3.og_pos = valik3.position
 	valik3.get_child(1).texture = load(variandid[2])
-	if valikunumber == 17:
+		
+	
+	if valikunumber == 17 or valikunumber == 19:
 		valik1.õige = true
 		valik2.õige = true
 		valik3.õige = true
+		if valikunumber == 19:
+			valik1.scale*=2
+			valik2.scale*=2
+			valik3.scale*=2
 	if nr == 0:
 		valik1.õige = true
 	elif nr == 1:
 		valik2.õige = true
 	elif nr ==2:
 		valik3.õige = true
+
 func hiirekontroll():
 	if hiir_masinal == true:
 		hiir_masinal = false
