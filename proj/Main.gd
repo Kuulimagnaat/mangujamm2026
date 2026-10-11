@@ -218,6 +218,8 @@ func hiirekontroll():
 		hiir_masinal = false
 	elif hiir_masinal == false:
 		hiir_masinal = true
+		
+@onready var talk_player = $audioplayers/talk
 func lisa_tekst(küsimus):
 	$Tekstimull.visible = true
 	$Tekstimull.text = küsimus
@@ -225,6 +227,13 @@ func lisa_tekst(küsimus):
 	for i in range($Tekstimull.text.length()):
 		$Tekstimull.visible_characters = i+1
 		await get_tree().create_timer(teksti_kiirus).timeout
+		if !talk_player.playing:
+			talk_player.play()
+		#print(talk_player.get_playback_position())
+		if talk_player.get_playback_position() > 0.72:
+			print("!!!!!!!!!")
+			talk_player.play(0.04)
+			
 
 func kaotad():
 	for i in range(eq.get_band_count()):
