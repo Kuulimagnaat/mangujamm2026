@@ -2,14 +2,14 @@
 	"küs" :
 	[
 		[
-			["Palun anna mulle midagi rohelist", "res://Masinasse/roheline_sark.png"],
-			["Palun anna mulle midagi sinist", "res://Masinasse/Sinised teksad.png"],
-			["Palun anna mulle midagi punast", "res://Masinasse/punased_sokid.png"]
+			["Palun anna mulle midagi rohelist.", "res://Masinasse/roheline_sark.png"],
+			["Palun anna mulle midagi sinist.", "res://Masinasse/Sinised teksad.png"],
+			["Palun anna mulle midagi punast.", "res://Masinasse/punased_sokid.png"]
 		],
 		[
 			["Kas ma saaksin, midagi, mis meenutaks mulle lepatriinut?","res://Masinasse/triibuline_sark.png"],
-			["Kas ma saaksin midagi, mis meenutaks mulle zebrat","res://Masinasse/triibulised_sokid.png"],
-			["Kas ma saaksin midagi, mis meenutaks mulle malelauda", "res://Masinasse/ruuduline_sark.png"]
+			["Kas ma saaksin midagi, mis meenutaks mulle sebrat?","res://Masinasse/triibulised_sokid.png"],
+			["Kas ma saaksin midagi, mis meenutaks mulle malelauda?", "res://Masinasse/ruuduline_sark.png"]
 		],
 		[
 			["Mulle ei meeldi oma selgroog, kas sul on midagi selle katmiseks?","res://Masinasse/kassisark.png"],
@@ -17,23 +17,23 @@
 			["Mul varbad värisevad. Kas sul on selleks midagi?","res://Masinasse/mustvalged_sokid.png"]
 		],
 		[
-			["Sa oled mulle juba palju riideid andnud, kuhu neid panna?","res://Masinasse/riidepuu.png"],
+			["Sa oled mulle juba palju riideid andnud. Kuhu neid panna?","res://Masinasse/riidepuu.png"],
 			["Mul hakkas janu. On juua?","res://Masinasse/seebipudel.png"],
 			["Ööd on siin konkus külmad. On midagi anda?","res://Masinasse/magamiskott.png"]
 		],
 		[
-			["Mulle meeldivad nunnud loomad.Äkki teed varajase sünna kingi?","res://Masinasse/kassisark.png"],
+			["Mulle meeldivad nunnud loomad. Äkki teed varajase sünna kingi?","res://Masinasse/kassisark.png"],
 			["Ma olen õuduka maratonil. On sul midagi õudsat?","res://Masinasse/krokodillisark.png"],
-			["Mul on täna eksperimentaalne tuju.On sul midagi veidrat, aga samashuvitavat?","res://Masinasse/nokkloomasark.png"]
+			["Mul on täna eksperimentaalne tuju. On sul midagi veidrat, aga samas huvitavat?","res://Masinasse/nokkloomasark.png"]
 		],
 		[
-			["Mu kõht on üks tühi auk, auke onpalju, anna auke.","res://Masinasse/AUKLIKUD_SOKID.png"],
-			["Anna midagi, millel on justparajalt auke","res://Masinasse/ruuduline_sark.png"],
-			["Riidemaailmas läheb kõik koguaeg august sisse. Anna midagi aukudeta","res://Masinasse/aukudeta_alukad.png"]
+			["Mu kõht on üks tühi auk, auke on palju, anna auke.","res://Masinasse/AUKLIKUD_SOKID.png"],
+			["Anna midagi, millel on just parajalt auke.","res://Masinasse/ruuduline_sark.png"],
+			["Riidemaailmas läheb kõik koguaeg august sisse. Anna midagi aukudeta.","res://Masinasse/aukudeta_alukad.png"]
 		],
 		[
 			["Ma olen valmis veetma oma ülejäänud elu kellegi teisega. Mida pakud?","res://Masinasse/pulmakleit.png"],
-			["Naabermaja pesumasin läks katki. Kogu tänav leinab teda. On vaja matusteks valmistuda","res://Masinasse/umbrella.png"],
+			["Naabermaja pesumasin läks katki. Kogu tänav leinab teda. On vaja matusteks valmistuda.","res://Masinasse/umbrella.png"],
 			["Kõhus keerab, mul on tunne nagu varsti tuleks mus uksest teine pesumasin välja. Ma pean olema valmis.","res://Masinasse/Haigekittel.png"]
 		],
 		[
@@ -42,8 +42,8 @@
 			["Viimastel õhtutel oled visanud nii palju riideid minu sisse. Ma saan vaevu sõba silmale. Tee midagi!","res://Masinasse/unetabletid.png"]
 		],
 		[
-			["Anna mulle midagi, mida pesumasinkond pole veel näinud","res://Masinasse/Tulnukamuts.png"],
-			["Anna midagi, mida võis näha minu vanavanavanavanavana- isa söör Pantsalot.","res://Masinasse/Rongassark.png"],
+			["Anna mulle midagi, mida pesumasinkond pole veel näinud.","res://Masinasse/Tulnukamuts.png"],
+			["Anna midagi, mida võis näha minu vanavanavanavanavanaisa Söör Pantsalot.","res://Masinasse/Rongassark.png"],
 			["Ma näen neid pükse su jalas. Päris uhked, mulle meeldivad. Äkki annad mulle.","res://Masinasse/Sinised teksad.png"]
 		],
 		[
@@ -52,23 +52,23 @@
 			["Anna mulle midagi, mis näitab su tõelist pühendumust meie sõprusele.","res://Masinasse/Sormus.png"]
 		],
 		[
-			["Anna mulle midagi, mida saan kanda ja mille tõttu kõigi pead pöörduvad minu poole","res://Masinasse/krokodillinahast_saapad.png"],
-			["Anna mulle midagi, mis aitaks mind kui ma leian end looma seljast ja tahan kiiresti liikuda.","res://Masinasse/Kauboisaapad.png"],
+			["Anna mulle midagi, mida saan kanda ja mille tõttu kõigi pead pöörduvad minu poole.","res://Masinasse/krokodillinahast_saapad.png"],
+			["Anna mulle midagi, mis aitaks mind, kui ma leian end looma seljast ja tahan kiiresti liikuda.","res://Masinasse/Kauboisaapad.png"],
 			["Anna mulle midagi, mis aitab konku sügavaid järvi läbida.","res://Masinasse/kummik.png"]
 		],
 		[
-			["Ma kuulen, et inimestel on kaisuloomad. Ma tahan ka, aga päris looma. Minu sees olev vesi on veeloomale loodud","res://Masinasse/surnud_kala.png"],
-			["Ma kuulen, et inimestel on kaisuloomad. Ma tahan ka, aga päris looma. Midagi eksootilist","res://Masinasse/Surnud_lind.png"],
-			["Ma kuulen, et inimestel on kaisuloomad. Ma tahan ka, aga päris looma. Aga ma pole koristanud, seega anna midagi, mis hästi ei näe.","res://Masinasse/surnud_mutt.png"]
+			["Ma kuulen, et inimestel on kaisuloomad. Ma tahan ka, aga päris looma. Minu sees olev vesi on veeloomale loodud.","res://Masinasse/surnud_kala.png"],
+			["Ma kuulen, et inimestel on kaisuloomad. Ma tahan ka, aga päris looma. Midagi eksootilist.","res://Masinasse/Surnud_lind.png"],
+			["Inimestel on kaisuloomad. Ma tahan päris looma. Aga ma pole koristanud, seega anna midagi, mis hästi ei näe.","res://Masinasse/surnud_mutt.png"]
 		],
 		[
-			["Ma ostsin endale hiljuti tagavarapiibli ja tahan seda kirikuõpetajale näidata. Aga mul pole riideid, millega jumalateenistusele minna","res://Masinasse/hakama.png"],
+			["Ma ostsin endale tagavarapiibli ja tahan kirikuõpetajale näidata. Aga pole riideid, millega kirikusse minna.","res://Masinasse/hakama.png"],
 			["Varsti tuleb minu viies sünnipäev, see vajab tähistamist. Mida kanda? Mida kanda?","res://Masinasse/kimono.png"],
-			["Midagi peale visata","res://Masinasse/haori.png"]
+			["Ma vihkan kuidas, ämblikud mu peal ronivad, mul on vaja midagi lihtsat peale visata.","res://Masinasse/haori.png"]
 		],
 		[
 			["Ma olen mõelnud, et sa veedad kogu päeva arvuti taga. Ma tahan ka näha, mis sa seal teed.","res://Masinasse/lapakas.png"],
-			["Inimesed on kaotanud oma ühenduse loodusega. Anna midagi, mida kasutasid koopapesumasinad","res://Masinasse/Kivi.png"],
+			["Inimesed on kaotanud oma ühenduse loodusega. Anna midagi, mida kasutasid koopapesumasinad.","res://Masinasse/Kivi.png"],
 			["Ma ei mõtle piisavalt suurelt. Kui ma vaid saaksin ise riideid toota, siis oleks kõik hea.","res://Masinasse/vokk.png"]
 		],
 		[
@@ -78,13 +78,13 @@
 		],
 		[
 			["Kas su investeeringutel on helge tulevik. Sa tead, et need on minu omad onju.","res://Masinasse/aktsiad.png"],
-			["Anna mulle koht, kust saad sissetulekut. Ainus väärtuslik asi, mida vajad olen mina!","res://Masinasse/lapakas.png"],
+			["Anna mulle koht, kust saad sissetulekut. Ainus väärtuslik asi, mida vajad olen MINA!","res://Masinasse/lapakas.png"],
 			["Mis on kõige väärtuslikum asi mida sa omad. Sa pead kõik mulle andma!","res://Masinasse/bitcoin.png"]
 		],
 		[
 			["Ma olen nii lahe ja rikas, aga vaenlased on iga nurga taga. Ma vajan kaitset.","res://Masinasse/vammus.png"],
 			["Sa hoiad enda keha soojust endale? Nii ei tohi. Jalamaid mulle.","res://Masinasse/Palitu.png"],
-			["On vaid üks asi, mis teeks mind veel lahedamaks. Anna siia.","res://Masinasse/keep.png"]
+			["On vaid üks asi, mis teeks mind veel lahedamaks. Anna siia!","res://Masinasse/keep.png"]
 		],
 		[
 			["Näita oma pühendumust ütle mulle oma suurim saladus.","res://Masinasse/Sitt_kraanikausis.png"],
@@ -102,108 +102,4 @@
 			["Oled olnud ustav teener. OHVERDA KÕIK!",""]
 		],
 	],
-
-	"Vas":
-	[
-	[
-		["res://Masinasse/roheline_sark.png", 10, 10],
-		["res://Masinasse/Sinised teksad.png", 10, 10],
-		["res://Masinasse/punased_sokid.png", 10, 10]
-	],
-	[
-		["res://Masinasse/triibuline_sark.png", 10,10],
-		["res://Masinasse/triibulised_sokid.png", 10,10],
-		["res://Masinasse/ruuduline_sark.png", 1,1]
-	],
-	[
-		["res://Masinasse/kassisark.png", 1,1],
-		["res://Masinasse/luhikesed_puksid.png", 1,1],
-		["res://Masinasse/mustvalged_sokid.png", 1,1]
-	],
-	[
-		["res://Masinasse/riidepuu.png", 1,1],
-		["res://Masinasse/seebipudel.png", 1,1],
-		["res://Masinasse/magamiskott.png", 1,1]
-	],
-	[
-		["res://Masinasse/kassisark.png", 1,1],
-		["res://Masinasse/krokodillisark.png", 1,1],
-		["res://Masinasse/nokkloomasark.png", 1,1]
-	],
-	[
-		["res://Masinasse/AUKLIKUD_SOKID.png", 1,1],
-		["res://Masinasse/ruuduline_sark.png", 1,1],
-		["res://Masinasse/aukudeta_alukad.png", 1,1]
-	],
-	[
-		["res://Masinasse/pulmakleit.png", 1,1],
-		["res://Masinasse/umbrella.png", 1,1],
-		["", 1,1]
-	],
-	[
-		["res://Masinasse/lihakantsakas.png", 1,1],
-		["res://Masinasse/raamat.png", 1,1],
-		["res://Masinasse/unetabletid.png", 1,1]
-	],
-	[
-		["", 1,1],
-		["", 1,1],
-		["res://Masinasse/Sinised teksad.png", 1,1]
-	],
-	[
-		["", 1,1],
-		["", 1,1],
-		["", 1,1]
-	],
-	[
-		["", 1,1],
-		["", 1,1],
-		["", 1,1]
-	],
-	[
-		["", 1,1],
-		["", 1,1],
-		["res://Masinasse/surnud_mutt.png", 1,1]
-	],
-	[
-		["res://Masinasse/hakama.png", 1,1],
-		["res://Masinasse/kimono.png", 1,1],
-		["res://Masinasse/haori.png", 1,1]
-	],
-	[
-		["res://Masinasse/lapakas.png", 1,1],
-		["", 1,1],
-		["", 1,1]
-	],
-	[
-		["res://Masinasse/kass.png", 1,1],
-		["", 1,1],
-		["", 1,1]
-	],
-	[
-		["res://Masinasse/aktsiad.png", 1,1],
-		["", 1,1],
-		["res://Masinasse/bitcoin.png", 1,1]
-	],
-		[
-		["res://Masinasse/vammus.png", 1,1],
-		["", 1,1],
-		["", 1,1]
-	],
-		[
-		["", 1,1],
-		["", 1,1],
-		["", 1,1]
-	],
-		[
-		["res://Masinasse/mustad_sokid_valgete_triipudega.png", 1,1],
-		["res://Masinasse/valged_sokid_mustade_triipudega.png", 1,1],
-		["res://Masinasse/mustvalged_sokid.png", 1,1]
-	],
-		[
-		["", 1,1],
-		["", 1,1],
-		["", 1,1]
-	]
-	]
 }
