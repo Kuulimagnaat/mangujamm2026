@@ -96,7 +96,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(0.5, 1),
 "update": 0,
-"values": [Vector2(0, 234.885), Vector2(0, 71.46)]
+"values": [Vector2(0, 100.5), Vector2(0, 71.46)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -304,7 +304,7 @@ texture = ExtResource("2_h2yge")
 libraries/ = SubResource("AnimationLibrary_efxa6")
 
 [node name="Pesumasin" parent="." unique_id=1650951301 instance=ExtResource("10_4c57u")]
-position = Vector2(0, 234.885)
+position = Vector2(0, 100.5)
 scale = Vector2(0.776, 0.776)
 
 [node name="sarknupp" type="Node2D" parent="." unique_id=1262396135]
