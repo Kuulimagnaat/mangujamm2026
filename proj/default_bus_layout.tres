@@ -9,6 +9,29 @@ band_db/1000_hz = -25.2
 band_db/3200_hz = -25.5
 band_db/10000_hz = -27.7
 
+[sub_resource type="AudioEffectDelay" id="AudioEffectDelay_j3pel"]
+resource_name = "Delay"
+tap1_delay_ms = 268.0
+tap1_level_db = -5.43
+tap2_delay_ms = 522.0
+feedback_active = true
+feedback_delay_ms = 545.0
+
+[sub_resource type="AudioEffectEQ" id="AudioEffectEQ_g28q7"]
+resource_name = "EQ"
+band_db/32_hz = 10.4
+band_db/100_hz = 1.5
+band_db/320_hz = -7.2
+band_db/1000_hz = -7.6
+band_db/3200_hz = -7.0
+band_db/10000_hz = -4.5
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_j3pel"]
+resource_name = "Reverb"
+room_size = 0.37
+damping = 0.7
+wet = 0.42
+
 [resource]
 bus/0/volume_db = 0.06726074
 bus/1/name = &"outofroomfx"
@@ -19,3 +42,27 @@ bus/1/volume_db = 0.0
 bus/1/send = &"Master"
 bus/1/effect/0/effect = SubResource("AudioEffectEQ_j3pel")
 bus/1/effect/0/enabled = true
+bus/2/name = &"delay"
+bus/2/solo = false
+bus/2/mute = false
+bus/2/bypass_fx = false
+bus/2/volume_db = 0.0
+bus/2/send = &"reverb"
+bus/2/effect/0/effect = SubResource("AudioEffectDelay_j3pel")
+bus/2/effect/0/enabled = true
+bus/3/name = &"deatheq"
+bus/3/solo = false
+bus/3/mute = false
+bus/3/bypass_fx = false
+bus/3/volume_db = 0.0
+bus/3/send = &"delay"
+bus/3/effect/0/effect = SubResource("AudioEffectEQ_g28q7")
+bus/3/effect/0/enabled = true
+bus/4/name = &"reverb"
+bus/4/solo = false
+bus/4/mute = false
+bus/4/bypass_fx = false
+bus/4/volume_db = 0.0
+bus/4/send = &"deatheq"
+bus/4/effect/0/effect = SubResource("AudioEffectReverb_j3pel")
+bus/4/effect/0/enabled = true

@@ -31,6 +31,8 @@ var variandid
 @onready var outofroomfx = AudioServer.get_bus_index("outofroomfx")
 @onready var eq = AudioServer.get_bus_effect(outofroomfx, 0)
 
+var originaleq = [0,0,0,0,0,0]
+
 
 
 # Called when the node enters the scene tree for the first time.
@@ -48,6 +50,9 @@ func _ready() -> void:
 	mõõt.value = Global.rahulolu
 	eseme_asukohad.shuffle()
 	$Tekstimull.visible = false
+	
+	for i in range(eq.get_band_count()):
+		originaleq[i] = eq.get_band_gain_db(i)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
 # 1 tähendab menüüs olemist.
@@ -211,12 +216,19 @@ func lisa_tekst(küsimus):
 		await get_tree().create_timer(teksti_kiirus).timeout
 
 func kaotad():
+	for i in range(eq.get_band_count()):
+		eq.set_band_gain_db(i, originaleq[i])
+	get_tree().reload_current_scene()
+	AudioManager.get_node("kaotus").play()
 	kaotasid = true
 	play_animation()
-	
+
+
+
 
 
 func _on_button_pressed() -> void:
+	$audioplayers/togame.play()
 	audioFX_change()
 	MängiNupuVajutusel()
 
