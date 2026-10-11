@@ -119,7 +119,7 @@ func _process(delta: float) -> void:
 		if mõõt.value >= 100:
 			kaotad()
 	if alpha == true:
-		$"Viimane pilt".modulate.a += 2*delta
+		$"Viimane pilt".modulate.a += 10*delta
 
 func play_animation():
 	jookseb = false
