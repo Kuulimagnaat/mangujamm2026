@@ -53,7 +53,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_htxhm"]
 resource_name = "Lõpp"
-length = 3.0
+length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -61,7 +61,7 @@ tracks/0/path = NodePath("Viimane pilt:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 3),
+"times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(4, 1),
 "update": 0,
 "values": [Vector2(0, 0), Vector2(-1779, -2088)]
@@ -73,7 +73,7 @@ tracks/1/path = NodePath("Viimane pilt:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 3),
+"times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(4, 1),
 "update": 0,
 "values": [Vector2(1, 1), Vector2(12, 12)]
@@ -652,7 +652,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_uatky")
 }],
-"loop": 0,
+"loop": false,
 "name": &"default",
 "speed": 8.0
 }]

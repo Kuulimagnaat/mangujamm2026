@@ -72,6 +72,7 @@ func masinasse():
 		vanem.kummitustase = 1
 	else:
 		Global.rahulolu += 50
+		vanem.kummitustase = 1
 		wrong_item_player.play()
 
 
