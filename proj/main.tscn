@@ -807,6 +807,7 @@ volume_db = -0.245
 stream = ExtResource("29_qsp4k")
 
 [node name="Valge" type="Sprite2D" parent="." unique_id=1387452283]
+visible = false
 texture = ExtResource("30_kq58d")
 
 [connection signal="mouse_entered" from="sarknupp/Sprite2D/Button" to="sarknupp" method="_on_button_mouse_entered"]
