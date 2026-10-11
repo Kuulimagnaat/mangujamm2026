@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://bgbbtwa4n0h4o"]
 
-[ext_resource type="AudioStream" uid="uid://bf1hkig52g4ny" path="res://audio/813308__qubodup__wilhelm-scream.wav" id="1_2nh25"]
+[ext_resource type="AudioStream" uid="uid://3580f7iumm4r" path="res://audio/628357__martina_leitschuh__bridsound_crows_screamingcitysound_001.wav" id="1_2nh25"]
 
 [node name="AudioManager" type="AudioStreamPlayer" unique_id=1852484346]
 
 [node name="kaotus" type="AudioStreamPlayer" parent="." unique_id=12041945]
 stream = ExtResource("1_2nh25")
+bus = &"reverb"
