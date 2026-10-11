@@ -29,6 +29,7 @@
 [ext_resource type="AudioStream" uid="uid://d3ypkjclj1fue" path="res://audio/725408__jerimee__owl-plonk-stretched-tenfold.wav" id="23_d13ii"]
 [ext_resource type="AudioStream" uid="uid://bmpcbtpr3ekl0" path="res://audio/703247__xkeril__big-falling-debris-crash.wav" id="24_1u8w0"]
 [ext_resource type="AudioStream" uid="uid://yhvswc1ma4y3" path="res://audio/562976__conblast__disturbing-ding-ding.wav" id="29_qsp4k"]
+[ext_resource type="Texture2D" uid="uid://c3m8a7liouc8n" path="res://Joonistused/valge.png" id="30_kq58d"]
 
 [sub_resource type="Animation" id="Animation_efxa6"]
 resource_name = "MenüüstMängu"
@@ -553,7 +554,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_uatky")
 }],
-"loop": 0,
+"loop": false,
 "name": &"default",
 "speed": 8.0
 }]
@@ -735,6 +736,9 @@ volume_db = -0.245
 
 [node name="correct" type="AudioStreamPlayer" parent="audioplayers" unique_id=1052531647]
 stream = ExtResource("29_qsp4k")
+
+[node name="Valge" type="Sprite2D" parent="." unique_id=1387452283]
+texture = ExtResource("30_kq58d")
 
 [connection signal="mouse_entered" from="sarknupp/Sprite2D/Button" to="sarknupp" method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="sarknupp/Sprite2D/Button" to="sarknupp" method="_on_button_mouse_exited"]

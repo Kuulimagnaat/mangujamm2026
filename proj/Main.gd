@@ -218,10 +218,11 @@ func lisa_tekst(küsimus):
 func kaotad():
 	for i in range(eq.get_band_count()):
 		eq.set_band_gain_db(i, originaleq[i])
-	get_tree().reload_current_scene()
+	
 	AudioManager.get_node("kaotus").play()
 	kaotasid = true
 	play_animation()
+	get_tree().reload_current_scene()
 
 
 
