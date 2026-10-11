@@ -59,9 +59,13 @@ func _process(delta: float) -> void:
 func masinasse():
 	keerleb = true
 	vanem.eemalda_riided()
+	
+	var auhind = 30
+	
 	if õige == true:
-		Global.rahulolu -= 20
+		Global.rahulolu = max(Global.rahulolu - auhind, 0)
 		vanem.kummitustase = 1
 	else:
-		Global.rahulolu += 40
+		Global.rahulolu -= 50
+
 	
