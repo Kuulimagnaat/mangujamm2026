@@ -74,4 +74,5 @@ func masinasse():
 		Global.rahulolu += 50
 		wrong_item_player.play()
 
+
 	
