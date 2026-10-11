@@ -19,13 +19,13 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Global.rahulolu < 20:
-		texture = välimus1
+		texture = välimus5
 	elif Global.rahulolu >=20 and Global.rahulolu<40:
-		texture = välimus2
+		texture = välimus4
 	elif Global.rahulolu >=40 and Global.rahulolu<60:
 		texture = välimus3
 	elif Global.rahulolu >=60 and Global.rahulolu<80:
-		texture = välimus4
+		texture = välimus2
 	elif Global.rahulolu >=80 and Global.rahulolu<=100:
-		texture = välimus5
+		texture = välimus1
 		

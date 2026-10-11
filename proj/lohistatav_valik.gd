@@ -24,36 +24,44 @@ func hiirekontroll():
 		hiir_valikul = true
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if hiir_valikul == true and Input.is_action_just_pressed("Vasak_Hiir"):
-		var tween = get_tree().create_tween()
-		tween.tween_property($".", "position", Vector2(get_global_mouse_position()),0.04)
-		lohistab = true
-	elif lohistab == true:
-		self.global_position = get_global_mouse_position()
-	if Input.is_action_just_released("Vasak_Hiir") and lohistab == true:
-		if vanem.hiir_masinal == true:
-			keerleb = true
-			masinasse()
-			
-		else:
+	if vanem.olek == 3:
+		if hiir_valikul == true and Input.is_action_just_pressed("Vasak_Hiir"):
 			var tween = get_tree().create_tween()
-			tween.tween_property($".", "position", Vector2(og_pos), 0.4)
-			lohistab = false
+			tween.tween_property($".", "position", Vector2(get_global_mouse_position()),0.04)
+			lohistab = true
+		elif lohistab == true:
+			self.global_position = get_global_mouse_position()
+		if Input.is_action_just_released("Vasak_Hiir") and lohistab == true:
+			if vanem.hiir_masinal == true:
+				if vanem.valikunumber == 14:
+					vanem.visatav = self
+					vanem.play_animation()
+				elif vanem.valikunumber == 19:
+					vanem.play_animation()
+				else:
+					masinasse()
+			
+			else:
+				var tween = get_tree().create_tween()
+				tween.tween_property($".", "position", Vector2(og_pos), 0.4)
+				lohistab = false
 		
-	if keerleb == true:
-		var tween = get_tree().create_tween()
-		tween.tween_property($".","position", get_parent().get_node("Pesumasin").position, 0.2)
-		rotation += 3*delta
-		scale.y -=0.5*delta
-		scale.x -=0.5*delta
-		self.modulate.a -= 1*delta
-		if self.modulate.a <= 0:
-			vanem.esita_valik()
+		if keerleb == true:
+			var tween = get_tree().create_tween()
+			tween.tween_property($".","position", Vector2(20,120), 0.2)
+			rotation += 3*delta
+			scale.y -=0.5*delta
+			scale.x -=0.5*delta
+			self.modulate.a -= 1*delta
+			if self.modulate.a <= 0:
+				vanem.esita_valik()
+			
 func masinasse():
+	keerleb = true
 	vanem.eemalda_riided()
 	if õige == true:
-		Global.rahulolu += 20
+		Global.rahulolu -= 20
 		vanem.kummitustase = 1
 	else:
-		Global.rahulolu -= 40
+		Global.rahulolu += 40
 	

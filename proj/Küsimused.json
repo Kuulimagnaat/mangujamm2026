@@ -7,42 +7,28 @@
 			["Palun anna mulle midagi punast", "res://Masinasse/punased_sokid.png"]
 		],
 		[
-			["Kas ma saaksin, midagi, mis 
-			meenutaks mulle lepatriinut?","res://Masinasse/triibuline_sark.png"],
-			["Kas ma saaksin midagi, mis 
-			meenutaks mulle zebrat","res://Masinasse/triibulised_sokid.png"],
-			["Kas ma saaksin midagi, mis 
-			meenutaks mulle malelauda", "res://Masinasse/ruuduline_sark.png"]
+			["Kas ma saaksin, midagi, mis meenutaks mulle lepatriinut?","res://Masinasse/triibuline_sark.png"],
+			["Kas ma saaksin midagi, mis meenutaks mulle zebrat","res://Masinasse/triibulised_sokid.png"],
+			["Kas ma saaksin midagi, mis meenutaks mulle malelauda", "res://Masinasse/ruuduline_sark.png"]
 		],
 		[
-			["Mulle ei meeldi oma selgroog, 
-			kas sul on midagi selle katmiseks?","res://Masinasse/kassisark.png"],
-			["Mu tuharad tuulduvad liialt. Kas sul 
-			on mulle midagi anda?.","res://Masinasse/luhikesed_puksid.png"],
-			["Mul varbad värisevad. Kas sul 
-			on selleks midagi?","res://Masinasse/mustvalged_sokid.png"]
+			["Mulle ei meeldi oma selgroog, kas sul on midagi selle katmiseks?","res://Masinasse/kassisark.png"],
+			["Mu tuharad tuulduvad liialt. Kas sul on mulle midagi anda?.","res://Masinasse/luhikesed_puksid.png"],
+			["Mul varbad värisevad. Kas sul on selleks midagi?","res://Masinasse/mustvalged_sokid.png"]
 		],
 		[
-			["Sa oled mulle juba palju riideid 
-			andnud, kuhu neid panna?","res://Masinasse/riidepuu.png"],
+			["Sa oled mulle juba palju riideid andnud, kuhu neid panna?","res://Masinasse/riidepuu.png"],
 			["Mul hakkas janu. On juua?","res://Masinasse/seebipudel.png"],
-			["Ööd on siin konkus külmad. 
-			On midagi anda?","res://Masinasse/magamiskott.png"]
+			["Ööd on siin konkus külmad. On midagi anda?","res://Masinasse/magamiskott.png"]
 		],
 		[
-			["Mulle meeldivad nunnud loomad.
-			Äkki teed varajase sünna kingi?","res://Masinasse/kassisark.png"],
-			["Ma olen õuduka maratonil. 
-			On sul midagi õudsat?","res://Masinasse/krokodillisark.png"],
-			["Mul on täna eksperimentaalne tuju.
-			On sul midagi veidrat, aga samas
-			huvitavat?","res://Masinasse/nokkloomasark.png"]
+			["Mulle meeldivad nunnud loomad.Äkki teed varajase sünna kingi?","res://Masinasse/kassisark.png"],
+			["Ma olen õuduka maratonil. On sul midagi õudsat?","res://Masinasse/krokodillisark.png"],
+			["Mul on täna eksperimentaalne tuju.On sul midagi veidrat, aga samashuvitavat?","res://Masinasse/nokkloomasark.png"]
 		],
 		[
-			["Mu kõht on üks tühi auk, auke on
-			palju, anna auke.","res://Masinasse/AUKLIKUD_SOKID.png"],
-			["Anna midagi, millel on just
-			parajalt auke","res://Masinasse/ruuduline_sark.png"],
+			["Mu kõht on üks tühi auk, auke onpalju, anna auke.","res://Masinasse/AUKLIKUD_SOKID.png"],
+			["Anna midagi, millel on justparajalt auke","res://Masinasse/ruuduline_sark.png"],
 			["Riidemaailmas läheb kõik koguaeg august sisse. Anna midagi aukudeta","res://Masinasse/aukudeta_alukad.png"]
 		],
 		[
@@ -58,62 +44,62 @@
 		[
 			["Anna mulle midagi, mida pesumasinkond pole veel näinud","res://Masinasse/Tulnukamuts.png"],
 			["Anna midagi, mida võis näha minu vanavanavanavanavana- isa söör Pantsalot.","res://Masinasse/Rongassark.png"],
-			["Ma näen neid pükse su jalas. Päris uhked, mulle meeldivad. Anna mulle","res://Masinasse/Sinised teksad.png"]
+			["Ma näen neid pükse su jalas. Päris uhked, mulle meeldivad. Äkki annad mulle.","res://Masinasse/Sinised teksad.png"]
 		],
 		[
-			["Kasulikku",""],
-			["Ilusat",""],
-			["Olulist",""]
+			["Anna mulle midagi, mille ainus ülesanne elus on mind abistada.","res://Masinasse/Kell.png"],
+			["Ma olen oma küljeprofiili üle uhke. Anna mulle asi, mis aitab mu külgedel silma paista.","res://Masinasse/Korvarongad.png"],
+			["Anna mulle midagi, mis näitab su tõelist pühendumust meie sõprusele.","res://Masinasse/Sormus.png"]
 		],
 		[
-			["Ägeduseks",""],
-			["Kiiruseks",""],
-			["Mugavuseks",""]
+			["Anna mulle midagi, mida saan kanda ja mille tõttu kõigi pead pöörduvad minu poole","res://Masinasse/krokodillinahast_saapad.png"],
+			["Anna mulle midagi, mis aitaks mind kui ma leian end looma seljast ja tahan kiiresti liikuda.","res://Masinasse/Kauboisaapad.png"],
+			["Anna mulle midagi, mis aitab konku sügavaid järvi läbida.","res://Masinasse/kummik.png"]
 		],
 		[
-			["Veest",""],
-			["Õhust",""],
-			["Maast","res://Masinasse/surnud_mutt.png"]
+			["Ma kuulen, et inimestel on kaisuloomad. Ma tahan ka, aga päris looma. Minu sees olev vesi on veeloomale loodud","res://Masinasse/surnud_kala.png"],
+			["Ma kuulen, et inimestel on kaisuloomad. Ma tahan ka, aga päris looma. Midagi eksootilist","res://Masinasse/Surnud_lind.png"],
+			["Ma kuulen, et inimestel on kaisuloomad. Ma tahan ka, aga päris looma. Aga ma pole koristanud, seega anna midagi, mis hästi ei näe.","res://Masinasse/surnud_mutt.png"]
 		],
 		[
-			["Jumalateenistuseks","res://Masinasse/hakama.png"],
-			["Juubeliks","res://Masinasse/kimono.png"],
+			["Ma ostsin endale hiljuti tagavarapiibli ja tahan seda kirikuõpetajale näidata. Aga mul pole riideid, millega jumalateenistusele minna","res://Masinasse/hakama.png"],
+			["Varsti tuleb minu viies sünnipäev, see vajab tähistamist. Mida kanda? Mida kanda?","res://Masinasse/kimono.png"],
 			["Midagi peale visata","res://Masinasse/haori.png"]
 		],
 		[
-			["Tehnoloogilist","res://Masinasse/lapakas.png"],
-			["Primitiivset",""],
-			["Keskaegset",""]
+			["Ma olen mõelnud, et sa veedad kogu päeva arvuti taga. Ma tahan ka näha, mis sa seal teed.","res://Masinasse/lapakas.png"],
+			["Inimesed on kaotanud oma ühenduse loodusega. Anna midagi, mida kasutasid koopapesumasinad","res://Masinasse/Kivi.png"],
+			["Ma ei mõtle piisavalt suurelt. Kui ma vaid saaksin ise riideid toota, siis oleks kõik hea.","res://Masinasse/vokk.png"]
 		],
 		[
-			["Armsat","res://Masinasse/kass.png"],
-			["Armsat",""],
-			["Armsat",""]
+			["Kaisuloomad on nii igavad, nad ei tee midagi. Mul on vaja kaaslast. Hästi armsat.","res://Masinasse/kass.png"],
+			["Kaisuloomad on nii igavad, nad ei tee midagi. Mul on vaja kaaslast. Hästi armsat.","res://Masinasse/toataim.png"],
+			["Kaisuloomad on nii igavad, nad ei tee midagi. Mul on vaja kaaslast. Hästi armsat.","res://Masinasse/lihakantsakas.png"]
 		],
 		[
-			["Väärtuslikku","res://Masinasse/aktsiad.png"],
-			["Arvepabereid",""],
-			["Bitcoin","res://Masinasse/bitcoin.png"]
+			["Kas su investeeringutel on helge tulevik. Sa tead, et need on minu omad onju.","res://Masinasse/aktsiad.png"],
+			["Anna mulle koht, kust saad sissetulekut. Ainus väärtuslik asi, mida vajad olen mina!","res://Masinasse/lapakas.png"],
+			["Mis on kõige väärtuslikum asi mida sa omad. Sa pead kõik mulle andma!","res://Masinasse/bitcoin.png"]
 		],
 		[
-			["Lahinguks","res://Masinasse/vammus.png"],
-			["Soojaks",""],
-			["Stiiliks",""]
+			["Ma olen nii lahe ja rikas, aga vaenlased on iga nurga taga. Ma vajan kaitset.","res://Masinasse/vammus.png"],
+			["Sa hoiad enda keha soojust endale? Nii ei tohi. Jalamaid mulle.","res://Masinasse/Palitu.png"],
+			["On vaid üks asi, mis teeks mind veel lahedamaks. Anna siia.","res://Masinasse/keep.png"]
 		],
 		[
-			["Sinu suurim saladus",""],
-			["Sinu suurim saladus",""],
-			["Sinu suurim saladus",""]
+			["Näita oma pühendumust ütle mulle oma suurim saladus.","res://Masinasse/Sitt_kraanikausis.png"],
+			["Näita oma pühendumust ütle mulle oma suurim saladus.","res://Masinasse/kass_pesumasinasse.png"],
+			["Näita oma pühendumust ütle mulle oma suurim saladus.","res://Masinasse/Gei_lipp.png"]
 		],
 		[
-			["Mustvalget","res://Masinasse/mustad_sokid_valgete_triipudega.png"],
-			["Vastmulget","res://Masinasse/valged_sokid_mustade_triipudega.png"],
-			["Sama musta kui valget","res://Masinasse/mustvalged_sokid.png"]
+			["Sa pead oma tarkust mulle tõestama, anna mulle midagi mustvalget.","res://Masinasse/mustad_sokid_valgete_triipudega.png"],
+			["Sa pead oma tarkust mulle tõestama, anna mulle midagi vastmulget.","res://Masinasse/valged_sokid_mustade_triipudega.png"],
+			["Sa pead oma tarkust mulle tõestama, anna mulle midagi vamulgstet.","res://Masinasse/mustvalged_sokid.png"]
 		],
 		[
-			["Kas oled valmis suureks ohverduseks",""],
-			["Kas oled valmis suureks ohverduseks",""],
-			["Kas oled valmis suureks ohverduseks",""]
+			["Oled olnud ustav teener. OHVERDA KÕIK!","res://Placeholder/blu.png"],
+			["Oled olnud ustav teener. OHVERDA KÕIK!","res://Placeholder/blu.png"],
+			["Oled olnud ustav teener. OHVERDA KÕIK!","res://Placeholder/blu.png"]
 		],
 	],
 

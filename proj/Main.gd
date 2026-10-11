@@ -8,25 +8,32 @@ var vastus
 var valikud
 
 var valikunumber = -1
-
+var visatav
+var alpha
 var valikustseen
 var valik1
 var valik2
 var valik3
+var jookseb = true
 
 var eseme_asukohad = [Vector2(-400,1000), Vector2(0,1000), Vector2(400,1000)]
 var hiir_masinal = false
 var hiireotsas = null
 var pesumasinastseen
 var pesumasin
-var kummitustase = 2
-var rahulolutase = 3
+var kummitustase = 2.5
 
 var teksti_kiirus = 0.02
 var küsimus
 var variandid
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$Cutscene/Sprite2D.visible = false
+	$Cutscene/Sprite2D2.visible = false
+	$Cutscene/Sprite2D3.visible = false
+	$"Viimane anim".visible = false
+	$"Viimane pilt".visible = false
+	$"Esimene kaader".visible = false
 	#$Menuu/Mangi.pressed.connect(MängiNupuVajutusel)
 	
 	#mõõt = $"Ghost-o-meter"
@@ -64,17 +71,47 @@ func MängiNupuVajutusel():
 	
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("lisa"):
-		valikunumber += 1
-	if olek == 3:
-		
-		Global.rahulolu -= kummitustase*delta
+		valikunumber = 17
+	if olek == 3 and jookseb == true:
+		Global.rahulolu += kummitustase*delta
 		kummitustase += 0.5*delta
 		mõõt.value = Global.rahulolu
-		
-		if mõõt.value > 100:
-			mõõt.value = 100
 		if mõõt.value <= 0:
+			Global.rahulolu = 0
+		if mõõt.value >= 100:
 			kaotad()
+	if alpha == true:
+		$"Viimane pilt".modulate.a += 2*delta
+
+func play_animation():
+	jookseb = false
+	if valikunumber == 14:
+		$Cutscene/Sprite2D.visible = true
+		await get_tree().create_timer(2).timeout
+		$Cutscene/Sprite2D3.visible = true
+		await get_tree().create_timer(2).timeout
+		$Cutscene/Sprite2D2.visible = true
+		await get_tree().create_timer(2).timeout
+		$Cutscene/Sprite2D.visible = false
+		$Cutscene/Sprite2D2.visible = false
+		$Cutscene/Sprite2D3.visible = false
+		visatav.masinasse()
+	elif valikunumber == 19:
+		$"Esimene kaader".visible = true
+		await get_tree().create_timer(0.7).timeout
+		$"Viimane anim".visible = true
+		$"Esimene kaader".visible = false
+		$"Viimane anim".play()
+		await get_tree().create_timer(5.5).timeout
+		$"Viimane pilt".modulate.a = 0
+		$"Viimane pilt".visible = true
+		alpha = true
+		
+		
+		
+	jookseb = true
+		#Siia läheb mehe animatsioon.
+
 func esita_valik():
 	valikunumber += 1
 	if valik1 != null:
@@ -83,7 +120,10 @@ func esita_valik():
 		valik2.queue_free()
 	if valik3 != null:
 		valik3.queue_free()
-	nr = randi_range(0,2)
+	if valikunumber == 14 or valikunumber == 20:
+		nr = 0	
+	else:	
+		nr = randi_range(0,2)
 	küsimus = Global.küs[valikunumber][nr][0]
 	lisa_tekst(küsimus)
 	variandid =  [Global.küs[valikunumber][0][1], Global.küs[valikunumber][1][1], Global.küs[valikunumber][2][1]]
@@ -110,7 +150,10 @@ func esita_valik():
 	valik3.position = eseme_asukohad[2]
 	valik3.og_pos = valik3.position
 	valik3.get_child(1).texture = load(variandid[2])
-
+	if valikunumber == 17:
+		valik1.õige = true
+		valik2.õige = true
+		valik3.õige = true
 	if nr == 0:
 		valik1.õige = true
 	elif nr == 1:
