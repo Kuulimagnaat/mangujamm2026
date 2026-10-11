@@ -6,6 +6,10 @@ var og_pos
 var vanem
 var õige = false
 var keerleb = false
+
+@onready var wrong_item_player = get_node("/root/Main/audioplayers/wrongitem")
+@onready var correct_item_player = get_node("/root/Main/audioplayers/correct")
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var tween = get_tree().create_tween()
@@ -63,9 +67,11 @@ func masinasse():
 	var auhind = 20
 	
 	if õige == true:
-		Global.rahulolu = max(Global.rahulolu - auhind, 0)
+		correct_item_player.play()
+		Global.rahulolu = Global.rahulolu - auhind
 		vanem.kummitustase = 1
 	else:
-		Global.rahulolu -= 50
+		Global.rahulolu += 50
+		wrong_item_player.play()
 
 	

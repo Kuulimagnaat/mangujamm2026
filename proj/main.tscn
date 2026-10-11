@@ -18,16 +18,17 @@
 [ext_resource type="Texture2D" uid="uid://cyr16u4lkcud7" path="res://Joonistused/not_exit.png" id="14_w48qg"]
 [ext_resource type="Texture2D" uid="uid://b10i6exeggkjj" path="res://Joonistused/progress.png" id="16_2cqfq"]
 [ext_resource type="StyleBox" uid="uid://8of6sggdiu1t" path="res://style/new_style_box_flat.tres" id="17_yaehf"]
+[ext_resource type="AudioStream" uid="uid://bqskilgysut6h" path="res://audio/848312__dwswords__glass-smash.wav" id="18_074og"]
 [ext_resource type="Texture2D" uid="uid://dc156el0jeh7s" path="res://Joonistused/saoledniijulm0.png" id="18_82xsv"]
+[ext_resource type="AudioStream" uid="uid://btjr7ua7m7cgf" path="res://audio/401756__zenithinfinitivestudios__glitch_robot.wav" id="19_cegan"]
 [ext_resource type="Texture2D" uid="uid://b0i8dyqmbvtcq" path="res://Joonistused/saoledniijulm2.png" id="19_getpj"]
+[ext_resource type="AudioStream" uid="uid://2k1ee2daay12" path="res://audio/109191__ryding__washingmachine.wav" id="20_82xsv"]
 [ext_resource type="Texture2D" uid="uid://bkc67jlh6kgd4" path="res://Joonistused/saoledniijulm.png" id="20_ryguw"]
 [ext_resource type="Texture2D" uid="uid://bmwbkeotngbxh" path="res://Joonistused/Mees masinasse.png" id="21_getpj"]
-[ext_resource type="Texture2D" uid="uid://bkbj2yr00x4lu" path="res://Joonistused/Viimane_pilt.png" id="22_ryguw"]
-[ext_resource type="Texture2D" uid="uid://e5emsuipymsv" path="res://Joonistused/Lõpuanim/F0000.png" id="23_d13ii"]
-[ext_resource type="AudioStream" uid="uid://bqskilgysut6h" path="res://audio/848312__dwswords__glass-smash.wav" id="18_074og"]
-[ext_resource type="AudioStream" uid="uid://btjr7ua7m7cgf" path="res://audio/401756__zenithinfinitivestudios__glitch_robot.wav" id="19_cegan"]
-[ext_resource type="AudioStream" uid="uid://2k1ee2daay12" path="res://audio/109191__ryding__washingmachine.wav" id="20_82xsv"]
 [ext_resource type="AudioStream" uid="uid://carany5pxkat4" path="res://audio/232244__nick121087__cup-shelf-rattling.wav" id="22_ryguw"]
+[ext_resource type="AudioStream" uid="uid://d3ypkjclj1fue" path="res://audio/725408__jerimee__owl-plonk-stretched-tenfold.wav" id="23_d13ii"]
+[ext_resource type="AudioStream" uid="uid://bmpcbtpr3ekl0" path="res://audio/703247__xkeril__big-falling-debris-crash.wav" id="24_1u8w0"]
+[ext_resource type="AudioStream" uid="uid://yhvswc1ma4y3" path="res://audio/562976__conblast__disturbing-ding-ding.wav" id="29_qsp4k"]
 
 [sub_resource type="Animation" id="Animation_efxa6"]
 resource_name = "MenüüstMängu"
@@ -552,7 +553,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_uatky")
 }],
-"loop": false,
+"loop": 0,
 "name": &"default",
 "speed": 8.0
 }]
@@ -701,11 +702,9 @@ frame_progress = 0.48964706
 
 [node name="Viimane pilt" type="Sprite2D" parent="." unique_id=1890214943]
 z_index = 21
-texture = ExtResource("22_ryguw")
 
 [node name="Esimene kaader" type="Sprite2D" parent="." unique_id=1967806605]
 z_index = 19
-texture = ExtResource("23_d13ii")
 
 [node name="audioplayers" type="Node" parent="." unique_id=1404463273]
 
@@ -726,6 +725,16 @@ stream = ExtResource("22_ryguw")
 volume_db = -8.831
 autoplay = true
 
+[node name="togame" type="AudioStreamPlayer" parent="audioplayers" unique_id=1061622391]
+stream = ExtResource("23_d13ii")
+volume_db = 10.179
+
+[node name="wrongitem" type="AudioStreamPlayer" parent="audioplayers" unique_id=1329626953]
+stream = ExtResource("24_1u8w0")
+volume_db = -0.245
+
+[node name="correct" type="AudioStreamPlayer" parent="audioplayers" unique_id=1052531647]
+stream = ExtResource("29_qsp4k")
 
 [connection signal="mouse_entered" from="sarknupp/Sprite2D/Button" to="sarknupp" method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="sarknupp/Sprite2D/Button" to="sarknupp" method="_on_button_mouse_exited"]
