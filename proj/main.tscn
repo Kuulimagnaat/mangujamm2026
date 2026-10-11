@@ -33,7 +33,25 @@
 [ext_resource type="AudioStream" uid="uid://yhvswc1ma4y3" path="res://audio/562976__conblast__disturbing-ding-ding.wav" id="29_qsp4k"]
 [ext_resource type="Texture2D" uid="uid://c3m8a7liouc8n" path="res://Joonistused/valge.png" id="30_kq58d"]
 [ext_resource type="AudioStream" uid="uid://cgig6iqnhb85h" path="res://audio/802484__sadiquecat__whoosh-plastic-hanger-2-middle-clip-3.wav" id="30_seu75"]
+
 [ext_resource type="AudioStream" uid="uid://bsrimjso0yv20" path="res://audio/872014__qubodup__alien-word.ogg" id="33_4k2k6"]
+
+[ext_resource type="Texture2D" uid="uid://ckhrf7ubg5h5v" path="res://Placeholder/Screenshot 2026-10-11 141520.png" id="34_4k2k6"]
+
+[sub_resource type="Animation" id="Animation_4k2k6"]
+resource_name = "Fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Valge:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_htxhm"]
 resource_name = "Lõpp"
@@ -297,9 +315,22 @@ tracks/5/keys = {
 "update": 0,
 "values": [Vector2(1, 1)]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Valge:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_efxa6"]
 _data = {
+&"Fade": SubResource("Animation_4k2k6"),
 &"Lõpp": SubResource("Animation_htxhm"),
 &"MenüüstMängu": SubResource("Animation_efxa6"),
 &"RESET": SubResource("Animation_4c57u")
@@ -623,7 +654,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_uatky")
 }],
-"loop": 0,
+"loop": false,
 "name": &"default",
 "speed": 8.0
 }]
@@ -819,8 +850,14 @@ stream = ExtResource("33_4k2k6")
 volume_db = -1.744
 
 [node name="Valge" type="Sprite2D" parent="." unique_id=1387452283]
-visible = false
+z_index = 40
+scale = Vector2(200, 200)
 texture = ExtResource("30_kq58d")
+
+[node name="Menu screenshot" type="Sprite2D" parent="." unique_id=1716459119]
+z_index = 39
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("34_4k2k6")
 
 [connection signal="mouse_entered" from="sarknupp/Sprite2D/Button" to="sarknupp" method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="sarknupp/Sprite2D/Button" to="sarknupp" method="_on_button_mouse_exited"]

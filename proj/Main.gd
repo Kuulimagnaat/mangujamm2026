@@ -43,6 +43,8 @@ func _ready() -> void:
 	$"Viimane anim".visible = false
 	$"Viimane pilt".visible = false
 	$"Esimene kaader".visible = false
+	$Valge.visible = false
+	$"Menu screenshot".visible = false
 	#$Menuu/Mangi.pressed.connect(MängiNupuVajutusel)
 	
 	#mõõt = $"Ghost-o-meter"
@@ -81,7 +83,6 @@ func MängiNupuVajutusel():
 
 func reset():
 	Global.rahulolu = 50
-
 	get_tree().reload_current_scene()
 	
 
@@ -147,10 +148,11 @@ func play_animation():
 		alpha = true
 		await get_tree().create_timer(0.5).timeout
 		$AnimationPlayer.play("Lõpp")
-		await await get_tree().create_timer(3).timeout
-		var tween = get_tree().create_tween()
-		$Valge.modulate.a = 255
-		tween.tween_property($Valge, "modulate.a", 0, 2)
+		await get_tree().create_timer(3).timeout
+		$Valge.visible = true
+		$"Menu screenshot".visible = true
+		$AnimationPlayer.play("Fade")
+		await get_tree().create_timer(2).timeout
 		reset()
 	jookseb = true
 		#Siia läheb mehe animatsioon.
