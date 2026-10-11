@@ -223,7 +223,6 @@ func lisa_tekst(küsimus):
 			talk_player.play()
 		#print(talk_player.get_playback_position())
 		if talk_player.get_playback_position() > 0.72:
-			print("!!!!!!!!!")
 			talk_player.play(0.04)
 			
 
