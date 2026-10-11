@@ -66,6 +66,6 @@ func masinasse():
 		Global.rahulolu = max(Global.rahulolu - auhind, 0)
 		vanem.kummitustase = 1
 	else:
-		Global.rahulolu -= 50
+		Global.rahulolu += 50
 
 	
