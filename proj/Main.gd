@@ -119,11 +119,12 @@ func _process(delta: float) -> void:
 		if mõõt.value >= 100:
 			kaotad()
 	if alpha == true:
-		$"Viimane pilt".modulate.a += 2*delta
+		$"Viimane pilt".modulate.a += 10*delta
 
 func play_animation():
 	jookseb = false
-	if valikunumber == 14:
+	
+	if valikunumber == 14 and kaotasid == false:
 		$Cutscene/Sprite2D.visible = true
 		await get_tree().create_timer(2).timeout
 		$Cutscene/Sprite2D3.visible = true
@@ -146,7 +147,7 @@ func play_animation():
 		alpha = true
 		await get_tree().create_timer(0.5).timeout
 		$AnimationPlayer.play("Lõpp")
-		await await get_tree().create_timer(4).timeout
+		await await get_tree().create_timer(3).timeout
 		var tween = get_tree().create_tween()
 		$Valge.modulate.a = 255
 		tween.tween_property($Valge, "modulate.a", 0, 2)
@@ -218,11 +219,10 @@ func lisa_tekst(küsimus):
 func kaotad():
 	for i in range(eq.get_band_count()):
 		eq.set_band_gain_db(i, originaleq[i])
-	
+
 	AudioManager.get_node("kaotus").play()
 	kaotasid = true
 	play_animation()
-	get_tree().reload_current_scene()
 
 
 

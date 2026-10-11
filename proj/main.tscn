@@ -27,10 +27,40 @@
 [ext_resource type="Texture2D" uid="uid://bmwbkeotngbxh" path="res://Joonistused/Mees masinasse.png" id="21_getpj"]
 [ext_resource type="AudioStream" uid="uid://carany5pxkat4" path="res://audio/232244__nick121087__cup-shelf-rattling.wav" id="22_ryguw"]
 [ext_resource type="AudioStream" uid="uid://d3ypkjclj1fue" path="res://audio/725408__jerimee__owl-plonk-stretched-tenfold.wav" id="23_d13ii"]
+[ext_resource type="Texture2D" uid="uid://bkbj2yr00x4lu" path="res://Joonistused/Viimane_pilt.png" id="23_htxhm"]
 [ext_resource type="AudioStream" uid="uid://bmpcbtpr3ekl0" path="res://audio/703247__xkeril__big-falling-debris-crash.wav" id="24_1u8w0"]
+[ext_resource type="Texture2D" uid="uid://e5emsuipymsv" path="res://Joonistused/Lõpuanim/F0000.png" id="24_jq2sk"]
 [ext_resource type="AudioStream" uid="uid://yhvswc1ma4y3" path="res://audio/562976__conblast__disturbing-ding-ding.wav" id="29_qsp4k"]
 [ext_resource type="Texture2D" uid="uid://c3m8a7liouc8n" path="res://Joonistused/valge.png" id="30_kq58d"]
 [ext_resource type="AudioStream" uid="uid://cgig6iqnhb85h" path="res://audio/802484__sadiquecat__whoosh-plastic-hanger-2-middle-clip-3.wav" id="30_seu75"]
+
+[sub_resource type="Animation" id="Animation_htxhm"]
+resource_name = "Lõpp"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Viimane pilt:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(4, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-1779, -2088)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Viimane pilt:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(4, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(12, 12)]
+}
 
 [sub_resource type="Animation" id="Animation_efxa6"]
 resource_name = "MenüüstMängu"
@@ -179,6 +209,18 @@ tracks/11/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Viimane pilt:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_4c57u"]
 length = 0.001
@@ -230,9 +272,34 @@ tracks/3/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Viimane pilt:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Viimane pilt:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_efxa6"]
 _data = {
+&"Lõpp": SubResource("Animation_htxhm"),
 &"MenüüstMängu": SubResource("Animation_efxa6"),
 &"RESET": SubResource("Animation_4c57u")
 }
@@ -705,10 +772,12 @@ frame = 6
 frame_progress = 0.48964706
 
 [node name="Viimane pilt" type="Sprite2D" parent="." unique_id=1890214943]
-z_index = 21
+z_index = 22
+texture = ExtResource("23_htxhm")
 
 [node name="Esimene kaader" type="Sprite2D" parent="." unique_id=1967806605]
 z_index = 19
+texture = ExtResource("24_jq2sk")
 
 [node name="audioplayers" type="Node" parent="." unique_id=1404463273]
 
@@ -744,6 +813,7 @@ stream = ExtResource("29_qsp4k")
 stream = ExtResource("30_seu75")
 
 [node name="Valge" type="Sprite2D" parent="." unique_id=1387452283]
+visible = false
 texture = ExtResource("30_kq58d")
 
 [connection signal="mouse_entered" from="sarknupp/Sprite2D/Button" to="sarknupp" method="_on_button_mouse_entered"]
