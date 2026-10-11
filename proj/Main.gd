@@ -22,7 +22,7 @@ var hiir_masinal = false
 var hiireotsas = null
 var pesumasinastseen
 var pesumasin
-var kummitustase = 1.7
+var kummitustase = 0.5
 
 var teksti_kiirus = 0.02
 var küsimus
@@ -110,7 +110,7 @@ func audioFX_change():
 func _process(delta: float) -> void:
 	if olek == 3 and jookseb == true:
 		Global.rahulolu += kummitustase*delta
-		kummitustase += 0.6*delta
+		#kummitustase += 0.2*delta
 		mõõt.value = Global.rahulolu
 		if mõõt.value <= 0:
 			Global.rahulolu = 0
