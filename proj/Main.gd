@@ -32,8 +32,7 @@ var variandid
 @onready var eq = AudioServer.get_bus_effect(outofroomfx, 0)
 
 var originaleq = [0,0,0,0,0,0]
-
-
+@onready var wrong_item_player = get_node("/root/Main/audioplayers/wrongitem")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -224,14 +223,16 @@ func lisa_tekst(küsimus):
 	for i in range($Tekstimull.text.length()):
 		$Tekstimull.visible_characters = i+1
 		await get_tree().create_timer(teksti_kiirus).timeout
-		if !talk_player.playing:
-			talk_player.play()
-		#print(talk_player.get_playback_position())
-		if talk_player.get_playback_position() > 0.72:
-			talk_player.play(0.04)
+		if !kaotasid:
+			if !talk_player.playing:
+				talk_player.play()
+			#print(talk_player.get_playback_position())
+			if talk_player.get_playback_position() > 0.72:
+				talk_player.play(0.04)
 			
 
 func kaotad():
+	wrong_item_player.volume_linear = 0
 	for i in range(eq.get_band_count()):
 		eq.set_band_gain_db(i, originaleq[i])
 	
