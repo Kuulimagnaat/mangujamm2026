@@ -33,9 +33,7 @@
 [ext_resource type="AudioStream" uid="uid://yhvswc1ma4y3" path="res://audio/562976__conblast__disturbing-ding-ding.wav" id="29_qsp4k"]
 [ext_resource type="Texture2D" uid="uid://c3m8a7liouc8n" path="res://Joonistused/valge.png" id="30_kq58d"]
 [ext_resource type="AudioStream" uid="uid://cgig6iqnhb85h" path="res://audio/802484__sadiquecat__whoosh-plastic-hanger-2-middle-clip-3.wav" id="30_seu75"]
-
 [ext_resource type="AudioStream" uid="uid://bsrimjso0yv20" path="res://audio/872014__qubodup__alien-word.ogg" id="33_4k2k6"]
-
 [ext_resource type="Texture2D" uid="uid://ckhrf7ubg5h5v" path="res://Placeholder/Screenshot 2026-10-11 141520.png" id="34_4k2k6"]
 
 [sub_resource type="Animation" id="Animation_4k2k6"]
@@ -654,7 +652,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_uatky")
 }],
-"loop": false,
+"loop": 0,
 "name": &"default",
 "speed": 8.0
 }]
