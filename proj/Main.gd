@@ -22,7 +22,7 @@ var hiir_masinal = false
 var hiireotsas = null
 var pesumasinastseen
 var pesumasin
-var kummitustase = 0.5
+var kummitustase = 0.8
 
 var teksti_kiirus = 0.02
 var küsimus

@@ -71,7 +71,7 @@ func masinasse():
 		Global.rahulolu = Global.rahulolu - auhind
 		vanem.kummitustase = 1
 	else:
-		Global.rahulolu += 50
+		Global.rahulolu += 35
 		vanem.kummitustase = 1
 		wrong_item_player.play()
 
