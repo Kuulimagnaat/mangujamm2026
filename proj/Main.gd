@@ -15,13 +15,14 @@ var valik1
 var valik2
 var valik3
 var jookseb = true
+var kaotasid = false
 
 var eseme_asukohad = [Vector2(-400,1000), Vector2(0,1000), Vector2(400,1000)]
 var hiir_masinal = false
 var hiireotsas = null
 var pesumasinastseen
 var pesumasin
-var kummitustase = 2.5
+var kummitustase = 2
 
 var teksti_kiirus = 0.02
 var küsimus
@@ -73,6 +74,11 @@ func MängiNupuVajutusel():
 	olek = 3
 	esita_valik()
 
+func reset():
+	Global.rahulolu = 50
+
+	get_tree().reload_current_scene()
+	
 
 var eq_tween: Tween
 func audioFX_change():
@@ -98,7 +104,7 @@ func audioFX_change():
 	
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("lisa"):
-		valikunumber = 17
+		valikunumber = 18
 	if olek == 3 and jookseb == true:
 		Global.rahulolu += kummitustase*delta
 		kummitustase += 0.5*delta
@@ -123,7 +129,7 @@ func play_animation():
 		$Cutscene/Sprite2D2.visible = false
 		$Cutscene/Sprite2D3.visible = false
 		visatav.masinasse()
-	elif valikunumber == 19:
+	elif valikunumber == 19 or kaotasid == true:
 		$"Esimene kaader".visible = true
 		await get_tree().create_timer(0.7).timeout
 		$"Viimane anim".visible = true
@@ -133,9 +139,13 @@ func play_animation():
 		$"Viimane pilt".modulate.a = 0
 		$"Viimane pilt".visible = true
 		alpha = true
-		
-		
-		
+		await get_tree().create_timer(0.5).timeout
+		$AnimationPlayer.play("Lõpp")
+		await await get_tree().create_timer(4).timeout
+		var tween = get_tree().create_tween()
+		$Valge.modulate.a = 255
+		tween.tween_property($Valge, "modulate.a", 0, 2)
+		reset()
 	jookseb = true
 		#Siia läheb mehe animatsioon.
 
@@ -201,8 +211,8 @@ func lisa_tekst(küsimus):
 		await get_tree().create_timer(teksti_kiirus).timeout
 
 func kaotad():
-	Global.rahulolu = 50
-	get_tree().reload_current_scene()
+	kaotasid = true
+	play_animation()
 	
 
 

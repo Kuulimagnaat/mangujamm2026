@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://ckmbqosfu3btp" path="res://Helislaider.gd" id="4_272bh"]
 [ext_resource type="StyleBox" uid="uid://cesndpd71x5ue" path="res://style/style_box_flat2.tres" id="5_getpj"]
 [ext_resource type="Texture2D" uid="uid://nunfx0xgwbhf" path="res://Joonistused/Püks.png" id="5_kek77"]
-[ext_resource type="Texture2D" uid="uid://dobdahkoxf81o" path="res://Joonistused/Valikud.png" id="6_4c57u"]
+[ext_resource type="Texture2D" uid="uid://c0fgur8u5uppp" path="res://Joonistused/Noor.png" id="7_qsp4k"]
 [ext_resource type="Script" uid="uid://cwlaesoua1f5f" path="res://sein.gd" id="8_kek77"]
 [ext_resource type="PackedScene" uid="uid://eqgn3tvg73hk" path="res://pesumasin.tscn" id="10_4c57u"]
 [ext_resource type="Script" uid="uid://bvllfa5sx50vb" path="res://sarknupp.gd" id="11_dg77c"]
@@ -18,16 +18,45 @@
 [ext_resource type="Texture2D" uid="uid://cyr16u4lkcud7" path="res://Joonistused/not_exit.png" id="14_w48qg"]
 [ext_resource type="Texture2D" uid="uid://b10i6exeggkjj" path="res://Joonistused/progress.png" id="16_2cqfq"]
 [ext_resource type="StyleBox" uid="uid://8of6sggdiu1t" path="res://style/new_style_box_flat.tres" id="17_yaehf"]
+[ext_resource type="AudioStream" uid="uid://bqskilgysut6h" path="res://audio/848312__dwswords__glass-smash.wav" id="18_074og"]
 [ext_resource type="Texture2D" uid="uid://dc156el0jeh7s" path="res://Joonistused/saoledniijulm0.png" id="18_82xsv"]
+[ext_resource type="AudioStream" uid="uid://btjr7ua7m7cgf" path="res://audio/401756__zenithinfinitivestudios__glitch_robot.wav" id="19_cegan"]
 [ext_resource type="Texture2D" uid="uid://b0i8dyqmbvtcq" path="res://Joonistused/saoledniijulm2.png" id="19_getpj"]
+[ext_resource type="AudioStream" uid="uid://2k1ee2daay12" path="res://audio/109191__ryding__washingmachine.wav" id="20_82xsv"]
 [ext_resource type="Texture2D" uid="uid://bkc67jlh6kgd4" path="res://Joonistused/saoledniijulm.png" id="20_ryguw"]
 [ext_resource type="Texture2D" uid="uid://bmwbkeotngbxh" path="res://Joonistused/Mees masinasse.png" id="21_getpj"]
 [ext_resource type="Texture2D" uid="uid://bkbj2yr00x4lu" path="res://Joonistused/Viimane_pilt.png" id="22_ryguw"]
 [ext_resource type="Texture2D" uid="uid://e5emsuipymsv" path="res://Joonistused/Lõpuanim/F0000.png" id="23_d13ii"]
-[ext_resource type="AudioStream" uid="uid://bqskilgysut6h" path="res://audio/848312__dwswords__glass-smash.wav" id="18_074og"]
-[ext_resource type="AudioStream" uid="uid://btjr7ua7m7cgf" path="res://audio/401756__zenithinfinitivestudios__glitch_robot.wav" id="19_cegan"]
-[ext_resource type="AudioStream" uid="uid://2k1ee2daay12" path="res://audio/109191__ryding__washingmachine.wav" id="20_82xsv"]
-[ext_resource type="AudioStream" uid="uid://carany5pxkat4" path="res://audio/232244__nick121087__cup-shelf-rattling.wav" id="22_ryguw"]
+[ext_resource type="AudioStream" uid="uid://carany5pxkat4" path="res://audio/232244__nick121087__cup-shelf-rattling.wav" id="28_xuqvo"]
+[ext_resource type="Texture2D" uid="uid://c3m8a7liouc8n" path="res://Joonistused/valge.png" id="29_qsp4k"]
+
+[sub_resource type="Animation" id="Animation_xuqvo"]
+resource_name = "Lõpp"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Viimane pilt:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(4, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-1740, -2067)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Viimane pilt:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(4, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(12, 12)]
+}
 
 [sub_resource type="Animation" id="Animation_efxa6"]
 resource_name = "MenüüstMängu"
@@ -227,9 +256,34 @@ tracks/3/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Viimane pilt:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Viimane pilt:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_efxa6"]
 _data = {
+&"Lõpp": SubResource("Animation_xuqvo"),
 &"MenüüstMängu": SubResource("Animation_efxa6"),
 &"RESET": SubResource("Animation_4c57u")
 }
@@ -609,7 +663,7 @@ script = ExtResource("4_272bh")
 [node name="Nöör" type="Sprite2D" parent="Menuu" unique_id=1331890702]
 z_index = 1
 position = Vector2(300, 0)
-texture = ExtResource("6_4c57u")
+texture = ExtResource("7_qsp4k")
 
 [node name="Püks" type="Sprite2D" parent="Menuu" unique_id=167368979]
 position = Vector2(798.925, -360.39)
@@ -700,7 +754,7 @@ frame = 6
 frame_progress = 0.48964706
 
 [node name="Viimane pilt" type="Sprite2D" parent="." unique_id=1890214943]
-z_index = 21
+z_index = 40
 texture = ExtResource("22_ryguw")
 
 [node name="Esimene kaader" type="Sprite2D" parent="." unique_id=1967806605]
@@ -719,13 +773,15 @@ stream = ExtResource("19_cegan")
 [node name="washingmachine" type="AudioStreamPlayer" parent="audioplayers" unique_id=1123437856]
 stream = ExtResource("20_82xsv")
 autoplay = true
-bus = &"outofroomfx"
 
 [node name="shelfrattling" type="AudioStreamPlayer" parent="audioplayers" unique_id=270025782]
-stream = ExtResource("22_ryguw")
+stream = ExtResource("28_xuqvo")
 volume_db = -8.831
 autoplay = true
 
+[node name="Valge" type="Sprite2D" parent="." unique_id=251751834]
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("29_qsp4k")
 
 [connection signal="mouse_entered" from="sarknupp/Sprite2D/Button" to="sarknupp" method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="sarknupp/Sprite2D/Button" to="sarknupp" method="_on_button_mouse_exited"]
